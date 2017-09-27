@@ -1,0 +1,65 @@
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:               16;
+$grid-gutter-width-base:     25px;
+$grid-gutter-widths: (
+	xs: 10px,
+	sm: 20px,
+	lg: $grid-gutter-width-base,
+);
+
+$grid-breakpoints: (
+		xs: $width-mobile,
+		sm: $width-tablet,
+		lg: $width-desktop //+ $grid-gutter-width-base
+);
+
+$container-max-widths: (
+		xs: $width-tablet,
+		sm: $width-desktop + $grid-gutter-width-base,
+
+);
+
+.container {
+	@media screen and (min-width: $width-tablet) and (max-width: $width-desktop - 1) {
+		padding: 0 25px!important;
+	}
+	@media (max-width: $width-tablet - 1) {
+		padding: 0 15px!important;
+	}
+}
+
+.gutter {
+	> [class*="col-"] {
+		padding: $grid-gutter-width-base/2;
+	}
+
+	@media screen and (min-width: $width-tablet) and (max-width: $width-desktop - 1) {
+		> [class*="col-"] {
+			padding: 10px;
+		}
+	}
+	@media (max-width: $width-tablet - 1) {
+		> [class*="col-"] {
+			padding: 5px;
+		}
+	}
+}
+
+.mobile-detect {
+	visibility: hidden;
+	position: fixed;
+	left: -9999px;
+	width: 0;
+}
+
+
+@media (max-width: $width-desktop) {
+	.mobile-detect {width: 1px;}
+}
+@media (max-width: $width-tablet) {
+	.mobile-detect {width: 2px;}
+}

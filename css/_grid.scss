@@ -1,0 +1,118 @@
+html {
+	box-sizing: border-box;
+	-ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+$width-min: 320px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+$gutter: 30px;
+
+
+.container {
+	width: 100%;
+	max-width: $tablet-width;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@media screen and (min-width: $tablet-width) {
+		max-width: $desktop-width;
+		padding: 0 20px;
+	}
+
+	@media screen and (min-width: $desktop-width) {
+		max-width: $desktop-width;
+		padding: 0 15px;
+	}
+}
+
+.hidden-xs-down {
+	@media screen and (max-width: $tablet-width) {
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: $desktop-width) {
+	.hidden-sm-down {
+		display: none;
+	}
+}
+
+
+.hidden-sm-up {
+	@media screen and (min-width: $tablet-width) {
+		display: none;
+	}
+}
+
+.hidden-lg-up {
+	@media screen and (min-width: $desktop-width) {
+		display: none;
+	}
+}
+
+
+/* Grid */
+
+@mixin col($width: 1, $padding: true) {
+	position: relative;
+	min-height: 1px;
+	width: percentage($width);
+	@if ($padding == true) {
+		padding-left: $gutter/2;
+		padding-right: $gutter/2;
+	}
+}
+
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$gutter/2;
+	margin-right: -$gutter/2;
+
+	&.no-gutters {
+
+		> .column,
+		> [class*="column-"] {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+$class-col: column !default;
+$class-col-xs: col-xs !default;
+$class-col-sm: col-sm !default;
+$class-col-lg: col-lg !default;
+
+
+
+@for $i from 1 through 12 {
+	.#{$class-col-xs}-#{$i} {
+		@include col($i/12);
+	}
+}
+
+@media (min-width: $tablet-width - 1) {
+	@for $i from 1 through 12 {
+		.#{$class-col-sm}-#{$i} {
+			@include col($i/12);
+		}
+	}
+}
+@media (min-width: $desktop-width - 1) {
+	@for $i from 1 through 12 {
+		.#{$class-col-lg}-#{$i} {
+			@include col($i/12);
+		}
+	}
+}

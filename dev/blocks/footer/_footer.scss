@@ -1,0 +1,114 @@
+.footer {
+	background-color: #304864;
+	background-image: url(/wp-content/themes/bricks/assets/img/pattern-dark.jpg);
+	-webkit-background-size: 50%;
+	background-size: 50%;
+	&__wrap {
+		@media screen and (min-width: $desktop-width) {
+			display: flex;
+			padding-top: 30px;
+		}
+	}
+	&__inner {
+		@media screen and (min-width: $desktop-width) {
+			padding-right: 40px;
+		}
+	}
+	&__top {
+		padding: 30px 0;
+		text-align: center;
+		@media screen and (min-width: $tablet-width) {
+			display: flex;
+			align-items: flex-start;
+			text-align: left;
+			justify-content: space-between;
+
+		}
+		@media screen and (min-width: $desktop-width) {
+			padding-top: 0;
+			padding-bottom: 20px;
+			align-items: center;
+		}
+	}
+	&__logo {
+		background-image: url(/wp-content/themes/bricks/assets/svg/footer_logo.svg);
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		display: inline-block;
+		width: 161px;
+		height: 54px;
+	}
+	&__menu {
+		padding: 30px 0 40px;
+		@media screen and (min-width: $tablet-width) {
+			padding: 0;
+		}
+	}
+	&__menu-item, &__menu li {
+		font: 900 13px/1em Museo;
+		letter-spacing: 0.5px;
+		color: #fff;
+		padding: 3px;
+		text-transform: uppercase;
+		display: block;
+		@media screen and (min-width: $desktop-width) {
+			display: inline-block;
+		}
+
+	}
+	&__menu-item + &__menu-item, &__menu li + li {
+		margin-top: 14px;
+		@media screen and (min-width: $desktop-width) {
+			margin-top: 0;
+			margin-left: 14px;
+		}
+	}
+	&__phone {
+		font: 900 25px/1em Museo;
+		color: #fff;
+		@media screen and (min-width: $desktop-width) {
+			font-size: 29px;
+		}
+	}
+	&__email {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 10px 0 18px;
+		@media screen and (min-width: $desktop-width) {
+			justify-content: flex-start;
+		}
+	}
+	&__email-link {
+		font: 500 14px/1em Museo;
+		color: #fff;
+		position: relative;
+		margin-left: 8px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			height: 1px;
+			background-color: rgba(255, 255, 255, 0.5);
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+	}
+	&__bottom {
+		text-align: center;
+		padding: 20px;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		font: 500 13px/1.46em Museo;
+		color: rgba(255, 255, 255, 0.5);
+		@media screen and (min-width: $desktop-width) {
+			text-align: left;
+			padding: 20px 0;
+		}
+	}
+}

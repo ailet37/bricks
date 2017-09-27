@@ -1,0 +1,90 @@
+.banner {
+	color:#fff;
+	position: relative;
+
+	&__wrap {
+		&:after {
+			content:'';
+			position: absolute;
+			bottom: 0;
+			height: 20px;
+			width: 100%;
+			background-image: url(/wp-content/themes/bricks/assets/svg/slider-curve.svg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: calc(50% - 23px) center;
+			z-index: 1;
+			background-repeat: no-repeat;
+			@media screen and (min-width: $desktop-width) {
+				//background-position: calc(50% - 20px) center;
+				//height: 24px;
+			}
+		}
+	}
+
+	&__cover {
+		background-image: url(/wp-content/themes/bricks/assets/img/banner/banner-1.jpg);
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	&__info {
+		text-align: center;
+		padding: 40px 40px 70px 40px;
+		@media screen and (min-width: $tablet-width) {
+			text-align: left;
+			padding: 100px 0;
+			width: 40%;
+		}
+	}
+	&__title {
+		font: 900 22px/1em Museo;
+		margin-bottom: 10px;
+		@media screen and (min-width: $tablet-width) {
+			font-size: 32px;
+		}
+		@media screen and (min-width: $desktop-width) {
+			font-size: 52px;
+			margin-bottom: 15px;
+		}
+	}
+	&__descr {
+		font: 500 14px/1.14em Museo;
+		margin-bottom: 19px;
+		@media screen and (min-width: $tablet-width) {
+			font-size: 18px;
+			line-height:1.38em;
+		}
+		@media screen and (min-width: $desktop-width) {
+			margin-bottom: 28px;
+		}
+	}
+
+	.swiper-pagination-bullets {
+		display: block;
+		max-width: 80px;
+		position: absolute;
+		width: auto;
+		margin: 0 auto;
+		border-radius: 100px;
+		background-color: #f2f9fc;
+		-webkit-box-shadow: 0 2px 11px 0 rgba(136, 190, 217, 0.47);
+		box-shadow: 0 2px 11px 0 rgba(136, 190, 217, 0.47);
+		bottom: 6px;
+		right: 0;
+		left: 0;
+		z-index: 10;
+		padding: 3px;
+
+	}
+	.swiper-pagination-bullet {
+		width: 11.2px;
+		height: 11.2px;
+		background-color: #c9dbe2;
+		margin: 0 3px;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: $main-green;
+	}
+}
