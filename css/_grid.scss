@@ -87,6 +87,13 @@ $gutter: 30px;
 			padding-left: 0;
 		}
 	}
+	&.gutters {
+		> .column,
+		> [class*="col-"] {
+			padding-top: $gutter/2;
+			padding-bottom: $gutter/2;
+		}
+	}
 }
 
 $class-col: column !default;

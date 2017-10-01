@@ -3,11 +3,16 @@
 @import 'css/fonts';
 @import 'css/grid';
 @import 'css/buttons';
+@import 'css/typo';
+@import 'css/utilities';
 
 
-@import 'dev/blocks/header/header';
-@import 'dev/blocks/footer/footer';
-@import 'dev/blocks/banner/banner';
+@import 'css/blocks/header';
+@import 'css/blocks/footer';
+@import 'css/blocks/banner';
+@import 'css/blocks/services';
+@import 'css/blocks/reviews';
+@import 'css/blocks/partners';
 
 @import 'js/lib/swiper/css/swiper.min.css';
 

@@ -1,0 +1,83 @@
+.services {
+    padding: 10px 0;
+    @media screen and (min-width: $tablet-width) {
+        padding: 50px 0 25px;
+    }
+    @media screen and (min-width: $desktop-width) {
+        padding: 70px 0 40px;
+    }
+    &__description {
+        text-align: center;
+        @media screen and (min-width: $desktop-width) {
+            text-align: left;
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-weight: 300;
+    }
+}
+
+.cart-item {
+    background-color: $light-green;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    padding: 20px 20px 80px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 150px;
+    @media screen and (min-width: $tablet-width) {
+        height: 290px;
+        padding: 30px 30px 80px;
+    }
+    @media screen and (min-width: $desktop-width) {
+        padding: 40px 40px 80px;
+    }
+    &_lg {
+        background-image: url(../assets/img/services/services-1.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+    }
+    &__title {
+
+        color: $main-blue;
+        font: 300 18px/1.18em Museo;
+        @media screen and (min-width: $tablet-width) {
+            font-size: 22px;
+        }
+    }
+    &__btn {
+
+        position: absolute;
+
+        bottom: 20px;
+        left: 20px;
+        @media screen and (min-width: $tablet-width) {
+            bottom: 30px;
+            left: 30px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            bottom: 40px;
+            left: 40px;
+        }
+
+    }
+}
+
+.seo-post {
+    margin: 30px 0;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__text {
+        font: 500 14px/1.33em Museo;
+        color: #3d3d3d;
+    }
+}
+

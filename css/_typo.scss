@@ -1,0 +1,22 @@
+.title-md {
+	font: 900 22px/1.1em Museo;
+	color: #000000;
+	@media screen and (min-width: $tablet-width) {
+		font-size: 32px;
+	}
+	@media screen and (min-width: $desktop-width) {
+		font-size: 40px;
+	}
+}
+
+//texts
+.text-md {
+	font: 500 14px/1.33em Museo;
+	color: #494949;
+	@media screen and (min-width: $tablet-width) {
+		font-size: 18px;
+	}
+	@media screen and (min-width: $desktop-width) {
+		font-size: 18px;
+	}
+}

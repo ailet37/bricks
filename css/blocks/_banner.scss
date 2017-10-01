@@ -9,7 +9,7 @@
 			bottom: 0;
 			height: 20px;
 			width: 100%;
-			background-image: url(/wp-content/themes/bricks/assets/svg/slider-curve.svg);
+			background-image: url(assets/svg/slider-curve.svg);
 			-webkit-background-size: cover;
 			background-size: cover;
 			background-position: calc(50% - 23px) center;
@@ -23,7 +23,7 @@
 	}
 
 	&__cover {
-		background-image: url(/wp-content/themes/bricks/assets/img/banner/banner-1.jpg);
+		background-image: url(assets/img/banner/banner-1.jpg);
 		-webkit-background-size: cover;
 		background-size: cover;
 		background-repeat: no-repeat;
