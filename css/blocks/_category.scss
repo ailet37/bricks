@@ -1,40 +1,115 @@
 .category-header {
-    padding: 60px 0 70px;
+    padding: 20px 0 30px;
     background-image: linear-gradient(94deg, #4b80c8, rgba(75, 128, 200, 0));
     color:#fff;
 
     &__title {
-        margin: 23px 0;
+
+        margin: 15px 0;
         color:#fff;
     }
     &__text {
-        font: 500 16px/1.31em Museo;
+        font: 500 14px/1.31em Museo;
+    }
+    @media screen and (min-width: $desktop-width) {
+        padding: 60px 0 70px;
+
+        &__title {
+            margin: 23px 0;
+        }
+        &__text {
+            width: 70%;
+        }
     }
 }
 
 .category {
-    //padding: 30px 0 60px;
+    @media screen and (min-width: $desktop-width) {
+        padding: 30px 0 60px;
+    }
 
-    &__item {
+    &__inner {
         padding: 23px 0;
         display: flex;
-        align-items: center;
         flex-direction: row;
+        @media screen and (min-width: $tablet-width) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     &__item + &__item {
         border-top:1px solid #d8d8d8;
+        @media screen and (min-width: $tablet-width) {
+            border-top: none;
+        }
     }
     &__img {
+        flex: 0 0 88px;
         width: 88px;
         height: 88px;
+        background-color: grey;
+        border-radius: 10px;
+        margin-right: 10px;
         img {
             display: block;
             max-width: 100%;
             max-height:100%;
         }
+        @media screen and (min-width: $tablet-width) {
+            flex: auto;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
     }
     &__title {
-        color:$main-blue;
-        font: 500 14px/1.36em Museo;
+
+    }
+    &__description {
+        font: italic 300 12px/1.29em Museo;
+        opacity: 0.4;
+        color: #000000;
+        margin: 10px 0;
+        @media screen and (min-width: $tablet-width) {
+            font-size: 14px;
+        }
+    }
+    &__price {
+        margin-top: 10px;
+        font: 500 20px/1em Museo;
+        color: #000000;
+        @media screen and (min-width: $tablet-width) {
+            font-size: 24px;
+        }
+    }
+}
+
+.category-post {
+    background-image: url(assets/img/pattern-light.jpg);
+    background-size: 50%;
+    background-repeat: repeat;
+    padding: 20px 0;
+    @media screen and (min-width: $tablet-width) {
+        padding: 35px 0 60px;
+    }
+    &__title {
+        margin-bottom: 15px;
+        @media screen and (min-width: $tablet-width) {
+            margin-bottom: 20px;
+        }
+    }
+    &__annotation {
+        font: 300 18px/1.33em Museo;
+        color: #494949;
+        margin-bottom: 15px;
+        @media screen and (min-width: $tablet-width) {
+            margin-bottom: 25px;
+        }
+    }
+    &__text {
+        font: 500 14px/1.29em Museo;
+        color: #3d3d3d;
     }
 }

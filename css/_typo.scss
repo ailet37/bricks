@@ -9,6 +9,14 @@
 	}
 }
 
+.title-sm {
+	font: 900 18px/1.1em Museo;
+	color: #000000;
+	@media screen and (min-width: $tablet-width) {
+		font-size: 26px;
+	}
+}
+
 //texts
 .text-md {
 	font: 500 14px/1.33em Museo;

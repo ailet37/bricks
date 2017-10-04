@@ -1,7 +1,37 @@
 .breadcrumbs {
-    font: 500 16px/1.31em Museo;
+    font: 500 14px/1.31em Museo;
     &__item {
         display: inline-block;
         vertical-align: middle;
+        border-bottom:1px solid rgba(255,255,255,0.5);
+        &._active {
+            border: none;
+            pointer-events: none;
+        }
+    }
+    &__item +  &__item {
+        margin-left: 5px;
+        &:before {
+            content:'/';
+            font-size: 14px;
+            position: relative;
+            left: -3px;
+        }
+    }
+}
+
+.link {
+    color:$main-blue;
+    font: 500 14px/1.36em Museo;
+
+
+    &__text {
+        position: relative;
+        border-bottom: 1px solid #4b80c8;
+        display: inline;
+    }
+
+    &:hover {
+        color: lighten($main-blue, 10%);
     }
 }
