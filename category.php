@@ -26,7 +26,7 @@ Template Name: Category Page
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
                     <a href="/" class="category__inner">
-                        <div class="category__img">пик</div>
+                        <div class="category__img"></div>
                         <div class="category__item-info">
                             <div class="category__title link">
                                 <div class="link__text">Дезинфектор жидкий, канистра 33 кг</div>
@@ -38,17 +38,15 @@ Template Name: Category Page
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
                     <a href="/" class="category__inner">
-                        <div class="category__img">пик</div>
+                        <div class="category__img"></div>
                         <div class="category__title link">
-                        <span class="link__text">width: 229px;
-                        height: 260px; width: 229px;
-                        height: 260px;</span>
+                        <span class="link__text">Альгицид Aquatics представляет собой эффективный и безопасный…</span>
                         </div>
                     </a>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
                     <a href="/" class="category__inner">
-                        <div class="category__img">пик</div>
+                        <div class="category__img"></div>
                         <div class="category__title link">
                             <span class="link__text">Название</span>
 
@@ -57,7 +55,7 @@ Template Name: Category Page
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
                     <a href="/" class="category__inner">
-                        <div class="category__img">пик</div>
+                        <div class="category__img"></div>
                         <div class="category__title link">Название</div>
                     </a>
                 </div>
