@@ -1,0 +1,65 @@
+.contacts {
+    position: relative;
+
+    &__block {
+        padding: 23px 0 60px;
+        background-color: #fff;
+        @media screen and (min-width: $tablet-width) {
+            padding: 35px 40px;
+            position: absolute;
+            top: 30px;
+            width: 290px;
+
+        }
+    }
+    &__map {
+        height: 250px;
+        background-color: red;
+        @media screen and (min-width: $tablet-width) {
+            height: 750px;
+        }
+    }
+    &__title {
+        margin: 20px 0 30px;
+    }
+    &__line {
+        display: flex;
+        align-items: center;
+        &._mail {
+            svg {
+
+            }
+            svg {path {
+                fill:$main-blue;
+            }}
+        }
+
+        svg {
+            margin-right: 15px;
+        }
+    }
+    &__line + &__line {
+        margin-top: 18px;
+    }
+    &__info {
+        font: 500 14px/1.33em Museo;
+    }
+    &__form-block {
+        margin: 30px 0 0 0;
+        padding: 30px 0 0 0;
+        border-top: 1px solid #dfe7eb;
+    }
+    &__form-title {
+        font: 500 13px/1.33em Museo;
+        letter-spacing: 1.9px;
+        color: #3d3d3d;
+    }
+    &__form {
+        margin: 30px 0 0 0 ;
+    }
+    &__form-btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+}
