@@ -1,5 +1,6 @@
 .breadcrumbs {
     font: 500 14px/1.31em Museo;
+
     &__item {
         display: inline-block;
         vertical-align: middle;
@@ -17,6 +18,16 @@
             position: relative;
             left: -3px;
         }
+    }
+    &_light {
+        color:#fff;
+    }
+    &_blue {
+        color:#4b80c8;
+        .breadcrumbs__item {
+            border-bottom: solid 1px rgba(75, 128, 200, 0.5);
+        }
+
     }
 }
 

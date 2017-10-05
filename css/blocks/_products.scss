@@ -1,0 +1,75 @@
+.product-page {
+    padding: 10px 0 40px;
+    &__title {
+        margin: 15px 0 20px;
+    }
+
+    &__item {
+        margin: 22px 0;
+        @media screen and (min-width: $tablet-width) {
+            border-bottom: 1px solid #e3e3e3;
+            margin: 0;
+            padding-bottom: 30px;
+        }
+    }
+    &__img {
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        display: inline-block;
+
+        img {
+            max-width:100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+    &__label {
+        font: 500 12px/1.4em Museo;
+        letter-spacing: 1.8px;
+        color: #6f6f6f;
+    }
+    &__price {
+        margin-top: 5px;
+        font: 500 37px/1em Museo;
+        color: #000000;
+    }
+    &__btn {
+        width: 100%;
+        margin-top: 16px;
+        @media screen and (min-width: $desktop-width) {
+            flex: 0 0 200px;
+        }
+    }
+    &__post {
+        @media screen and (min-width: $tablet-width) {
+            padding: 30px;
+            background-image: url(assets/img/pattern-light.jpg);
+            background-size: 50%;
+            background-repeat: repeat;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+    }
+    &__annotation {
+        font: 300 18px/1.3em Museo;
+        color: #494949;
+        margin: 25px 0;
+    }
+    &__text {
+        @media screen and (min-width: $tablet-width) {
+            font-size: 14px;
+            line-height: 1.29em;
+        }
+    }
+    &__order {
+        @media screen and (min-width: $desktop-width) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+}

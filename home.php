@@ -71,7 +71,7 @@ Template Name: Front Page
                     </div>
                     <div class="col-xs-12 col-sm-4 col-lg-4">
                         <a href="" class="cart-item"
-                           style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/services/services-2.png);">
+                           style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/services/services-2.jpg);">
                             <div class="cart-item__title">
                                 Строительство хамамов и бань
                             </div>
@@ -82,7 +82,7 @@ Template Name: Front Page
                     </div>
                     <div class="col-xs-12 col-sm-4 col-lg-4">
                         <div class="cart-item"
-                             style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/services/services-2.png);">
+                             style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/services/services-3.jpg);">
                             <div class="cart-item__title">
                                 Ремонт
                                 и обслуживание
@@ -95,7 +95,7 @@ Template Name: Front Page
                     </div>
                     <div class="col-xs-12 col-sm-4 col-lg-4">
                         <div class="cart-item"
-                             style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/services/services-3.png);">
+                             style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/services/services-4.jpg);">
                             <div class="cart-item__title">
                                 Химические
                                 средства для
