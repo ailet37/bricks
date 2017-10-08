@@ -8,10 +8,8 @@ Template Name: Category Page
 
     <section class="category-header">
         <div class="container">
-            <div class="breadcrumbs">
-                <a href="/" class="breadcrumbs__item">Главная</a>
-                <a href="" class="breadcrumbs__item">Химические средства для бассейнов</a>
-            </div>
+            <?php get_template_part( 'breadcrumbs' ); ?>
+
             <div class="category-header__title title-md">Химические средства для бассейнов</div>
             <div class="category-header__text">
                 Обслуживание домашнего бассейна либо бассейна общественного пользования представляет собой довольно

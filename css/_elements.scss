@@ -58,8 +58,18 @@
     + .input {
         margin-top: 10px;
     }
+    + .btn {
+        margin-top: 10px;
+    }
 }
-
+.select {
+    background: #f2f9fc;
+    border: none;
+    height: 40px;
+    width: 100%;
+    font: 500 14px/1.2em Museo;
+    border-radius: 10px;
+}
 .textarea {
     @extend .input;
     height:125px;

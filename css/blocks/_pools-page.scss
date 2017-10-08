@@ -1,0 +1,224 @@
+.advantages {
+    padding: 25px 0;
+    text-align: center;
+    &__row + &__row {
+        margin-top: 30px;
+        @media screen and (min-width: $desktop-width) {
+            margin-top: 80px;
+        }
+    }
+    @media screen and (max-width: $desktop-width) {
+        &__row:last-child {
+            margin-top: 0;
+        }
+    }
+    &__about {
+        @media screen and (min-width: $desktop-width) {
+            padding: 0 40px;
+        }
+    }
+    &__title {
+        @media screen and (min-width: $desktop-width) {
+            margin-top: 40px;
+        }
+    }
+    &__main-text {
+        margin: 30px 0;
+        //font: 500 14px/1.3em Museo;
+    }
+    &__wrap {
+        background-color: $light-green;
+        border-radius: 10px;
+        padding: 22px 25px;
+        @media screen and (min-width: $desktop-width) {
+            padding: 45px;
+        }
+    }
+    &__line + &__line {
+        margin-top: 25px;
+    }
+    &__line {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        svg {
+            flex: 0 0 55px;
+            width: 54px;
+            height: 46px;
+            margin-right: 18px;
+        }
+    }
+    &__text {
+        color: $main-blue;
+        font: 500 14px/1.3em Museo;
+    }
+    &__img img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+    }
+    &__img {
+        margin-bottom: 30px;
+        @media screen and (min-width: $desktop-width) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.calculate {
+    padding: 27px 20px;
+    background-image: url(assets/img/water-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin: 0 -15px;
+    @media screen and (min-width: $tablet-width) {
+        padding: 60px 65px;
+        margin: 0;
+        border-radius: 10px;
+    }
+    @media screen and (min-width: $desktop-width) {
+        padding: 90px 65px;
+    }
+    &__title {
+
+    }
+    &__text {
+        margin: 10px 0 20px;
+    }
+    &__form-alarm {
+        opacity: 0.7;
+        font-family: Museo;
+        font-size: 14px;
+        font-style: italic;
+        text-align: left;
+        color: #ffffff;
+        margin-top: 10px;
+    }
+    &__form-input {
+        float: left;
+        width: 33.33%;
+        margin: 0 !important;
+        &:nth-child(1) {
+            border-radius: 10px 0 0 10px;
+            border-right: 1px solid;
+        }
+        &:nth-child(2) {
+            border-radius: 0;
+            position: relative;
+            &:after {
+                content: '×';
+                position: absolute;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.2);
+            }
+        }
+        &:nth-child(3) {
+            border-left: 1px solid;
+            border-radius: 0 10px 10px 0;
+        }
+    }
+    &__form-row + &__form-row {
+        margin-top: 10px;
+    }
+    &__form-btn {
+        width: 100%;
+    }
+    @media screen and (max-width: $tablet-width) {
+        &__form-row:last-child {
+            margin-top: 0;
+        }
+        &__form-row input {
+            margin-bottom: 10px;
+        }
+        &__form-row select {
+            margin-top: 10px;
+        }
+    }
+}
+
+.steps {
+    margin: 50px 0;
+    &__wrap {
+        margin: 30px 0;
+        @media screen and (min-width: $tablet-width) {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 0 30px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            padding: 0;
+            flex-wrap: nowrap;
+            margin: 90px 0;
+        }
+    }
+    &__title {
+        text-align: center;
+    }
+
+    &__row {
+        align-items: center;
+        display: flex;
+        svg {
+            flex: 0 0 80px;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        @media screen and (min-width: $tablet-width) {
+            flex-direction: column;
+            svg {
+                margin-right: 0;
+                margin-bottom: 10px;
+                flex: 0 0 130px;
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+    }
+    &__row + &__row {
+        margin-top: 10px;
+        @media screen and (min-width: $tablet-width) {
+            margin-top: 0;
+        }
+
+    }
+    &__row {
+        @media screen and (min-width: $tablet-width) {
+            margin-bottom: 30px;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 15px;
+                background-color: #44d4a8;
+                right: 0;
+                top: 30%;
+            }
+
+        }
+        @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+            &:nth-child(3n):after {
+                content: none;
+            }
+        }
+        @media screen and (min-width: $desktop-width) {
+            &:last-child:after {
+                content: none;
+            }
+        }
+    }
+    &__text {
+        @media screen and (min-width: $tablet-width) {
+            padding: 0 60px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            padding: 0 30px;
+        }
+    }
+
+}

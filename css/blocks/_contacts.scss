@@ -9,12 +9,16 @@
             position: absolute;
             top: 30px;
             width: 290px;
-
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            width: 370px;
         }
     }
     &__map {
         height: 250px;
-        background-color: red;
         @media screen and (min-width: $tablet-width) {
             height: 750px;
         }
@@ -24,7 +28,7 @@
     }
     &__line {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         &._mail {
             svg {
 

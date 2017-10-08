@@ -10,13 +10,26 @@
 
 @import 'css/blocks/header';
 @import 'css/blocks/footer';
+
 @import 'css/blocks/banner';
 @import 'css/blocks/services';
 @import 'css/blocks/reviews';
 @import 'css/blocks/partners';
+
+
+
 @import 'css/blocks/category';
+
 @import 'css/blocks/products';
+
 @import 'css/blocks/contacts';
+
+@import 'css/blocks/pools-page';
+
+
+body {
+    font: 500 14px/1.3em Museo;
+}
 
 @import 'js/lib/swiper/css/swiper.min.css';
 

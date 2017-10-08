@@ -5,15 +5,17 @@ Template Name: Contacts Page
 ?>
 <?php get_header(); ?>
 
-<section class="contacts">
-    <div class="contacts__map">
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCacI9eBtbw4m3Vgcpiu6cE2ueBL3_huog">
+</script>
 
-    </div>
+<section class="contacts">
+    <div class="contacts__map" id="map"></div>
     <div class="container">
     <div class="contacts__block">
         <div class="breadcrumbs breadcrumbs_blue">
             <a href="/" class="breadcrumbs__item">Главная</a>
-            <a href="" class="breadcrumbs__item">Химические средства для бассейнов</a>
+            <a href="" class="breadcrumbs__item">Контакты</a>
         </div>
         <h1 class="contacts__title title-md">Контакты</h1>
 
@@ -41,7 +43,7 @@ Template Name: Contacts Page
 
         <div class="contacts__form-block">
             <div class="contacts__form-title">ЗАДАТЬ ВОПРОС</div>
-            <form action="" class="contacts__form">
+            <form action="wp-admin/admin-post.php" method="post" class="contacts__form">
                 <input type="text" class="input" placeholder="Ваше имя">
                 <input type="text" class="input" placeholder="Ваш email">
                 <textarea class="textarea" placeholder="Ваше сообщение"></textarea>

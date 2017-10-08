@@ -38,11 +38,11 @@
             </nav>
 
             <div class="header__contact">
-                <a href="tel:+7 (347) 266-97-86" class="header__phone hidden-sm-down">+7 (347) 266-97-86</a>
+                <a href="tel:+7 (347) 266-97-86" class="header__phone hidden-xs-down">+7 (347) 266-97-86</a>
                 <div class="header__callback">
                     <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/phone.svg' ); ?>
 
-                    <span class="header__callback-link hidden-sm-down">Обратный звонок</span>
+                    <span class="header__callback-link hidden-xs-down">Обратный звонок</span>
                 </div>
 
             </div>

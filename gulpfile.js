@@ -65,7 +65,7 @@
   * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
   */
 
- gulp.task('js:build', function() {
+ gulp.task('js', function() {
      return 	    gulp.src(path.src.js)
          //.pipe(concat('custom.js'))
          .pipe(gulp.dest(path.build.js))

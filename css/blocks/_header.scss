@@ -1,112 +1,133 @@
 .header {
 
-  &__top {
-    display: none;
-    @media screen and (min-width: $tablet-width)  {
-      padding: 15px 0;
-      color: $grey;
-      font: italic 15px/1.2em Museo;
-      border-bottom: 1px solid $light-grey;
-      text-align: center;
-      display: block;
+    &__top {
+        display: none;
+        @media screen and (min-width: $tablet-width) {
+            padding: 15px 0;
+            color: $grey;
+            font: italic 15px/1.2em Museo;
+            border-bottom: 1px solid $light-grey;
+            text-align: center;
+            display: block;
+        }
     }
-  }
-  &__bottom {
-    padding: 8px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    @media screen and (min-width: $tablet-width)  {
-      padding: 20px 0 80px;
+    &__bottom {
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        @media screen and (min-width: $tablet-width) {
+            padding: 20px 0 80px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            padding: 20px 0;
+        }
     }
-    @media screen and (min-width: $desktop-width)  {
-      padding: 20px 0;
+    &__menu {
+
+        @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+            padding: 20px 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            border-top: 1px solid $light-grey;
+        }
+
     }
-  }
-  &__menu {
+    &__menu-item, &__menu li {
+        font: 900 14px/1em Museo;
+        letter-spacing: 0.5px;
+        color: #000000;
+        text-transform: uppercase;
+        padding: 5px;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            .sub-menu {
+                display: block;
+            }
+        }
 
-    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width)  {
-      padding: 20px 0;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: 0;
-      margin: auto;
-      text-align: center;
-      border-top: 1px solid $light-grey;
     }
-
-  }
-  &__menu-item, &__menu li {
-    font: 900 14px/1em Museo;
-    letter-spacing: 0.5px;
-    color: #000000;
-    text-transform: uppercase;
-    padding: 5px;
-    display: inline-block;
-
-  }
-  &__menu li + li {
-    margin-left: 15px;
-  }
-  &__menu-item + &__menu-item {
-    margin-left: 15px;
-  }
-  &__menu-icon {
-    padding: 5px;
-    cursor: pointer;
-  }
-  &__logo {
-    background-image: url(assets/svg/logo.svg);
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    display: block;
-    width: 108px;
-    height: 39px;
-    @media screen and (min-width: $tablet-width)  {
-      width: 154px;
-      height: 56px;
+    &__menu li + li {
+        margin-left: 15px;
     }
-  }
-  &__phone {
-    font: 900 26px/1em Museo;
-    color: $main-blue;
-
-  }
-  &__callback {
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    svg {
-      width: 18px;
-      height: 18px;
+    &__menu-item + &__menu-item {
+        margin-left: 15px;
     }
-
-  }
-  &__callback-link {
-    font: 14px/1em Museo;
-    color: $main-blue;
-    position: relative;
-    margin-left: 5px;
-    &:after {
-      content:'';
-      position: absolute;
-      bottom: 0;
-      height: 1px;
-      background-color: $main-blue;
-      opacity: 0.5;
-      width: 100%;
-      left: 0;
+    &__menu-icon {
+        padding: 5px;
+        cursor: pointer;
     }
+    &__logo {
+        background-image: url(assets/svg/logo.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        display: block;
+        width: 108px;
+        height: 39px;
+        @media screen and (min-width: $tablet-width) {
+            width: 154px;
+            height: 56px;
+        }
+    }
+    &__phone {
+        font: 900 26px/1em Museo;
+        color: $main-blue;
 
-  }
+    }
+    &__callback {
+        padding: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+    }
+    &__callback-link {
+        font: 14px/1em Museo;
+        color: $main-blue;
+        position: relative;
+        margin-left: 5px;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            background-color: $main-blue;
+            opacity: 0.5;
+            width: 100%;
+            left: 0;
+        }
+
+    }
 }
 
 .sub-menu {
-  display: none;
+    display: none;
+    position: absolute;
+    background: #f3f3f3;
+    border-radius: 10px;
+    padding: 10px 5px;
+    top: 22px;
+    font-size: 13px;
+    z-index: 99;
+
+    li {
+        font-size: 10px;
+    }
+    li + li {
+        margin-left: 0;
+        margin-top: 4px;
+    }
 }
