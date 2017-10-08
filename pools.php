@@ -5,6 +5,22 @@ Template Name: Pools Page
 ?>
 <?php get_header(); ?>
 
+<section class="teaser">
+    <div class="container">
+        <?php get_template_part( 'breadcrumbs' ); ?>
+        <div class="teaser__info">
+            <div class="teaser__title title-md">
+                Строительство
+                бассейнов
+            </div>
+            <div class="teaser__descr">
+                Обслуживание домашнего бассейна либо бассейна общественного пользования представляет собой довольно сложную и дорогостоящую процедуру. Поэтому для покупателей важно найти такой магазин химии для бассейнов, который предлагает не только высокое качество, но и приемлемые цены.
+            </div>
+            <div class="teaser__btn btn">РАССЧИТАТЬ СТОИМОСТЬ</div>
+        </div>
+    </div>
+</section>
+
 <section class="advantages">
     <div class="container">
         <div class="advantages__row row">
@@ -188,6 +204,23 @@ Template Name: Pools Page
         </div>
     </div></div>
 </section>
+
+<section class="seo-post">
+    <div class="container">
+
+        <h1 class="seo-post__title title-md">Какой-то заголовок</h1>
+        <div class="seo-post__text">
+            По их почти единодушному мнению, действие существенно представляет собой ролевой контраст. Конечно,
+            нельзя не принять во внимание тот факт, что самость возможна.
+            <br><br>
+            Все это побудило нас обратить внимание на то, что действие мгновенно выбирает ролевой эскапизм.
+            Проекция возможна. Сновидение важно представляет собой кризис.
+        </div>
+
+</section>
+
+<?php get_template_part('template-parts/partners'); ?>
+<?php get_template_part('template-parts/reviews'); ?>
 
 
 <?php get_footer(); ?>
