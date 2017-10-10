@@ -1,6 +1,11 @@
 .banner {
 	color:#fff;
 	position: relative;
+	@media screen and (max-width: $tablet-width) {
+		.container {
+			padding: 0;
+		}
+	}
 
 	&__wrap {
 		&:after {
@@ -32,6 +37,7 @@
 	&__info {
 		text-align: center;
 		padding: 40px 40px 70px 40px;
+		box-sizing: border-box;
 		@media screen and (min-width: $tablet-width) {
 			text-align: left;
 			padding: 100px 0;

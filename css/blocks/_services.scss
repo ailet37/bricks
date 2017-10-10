@@ -1,10 +1,10 @@
 .services {
-    padding: 10px 0;
+    margin: 10px 0;
     @media screen and (min-width: $tablet-width) {
-        padding: 50px 0 25px;
+        margin: 50px 0 25px;
     }
     @media screen and (min-width: $desktop-width) {
-        padding: 70px 0 40px;
+        margin: 70px 0 40px;
     }
     &__description {
         text-align: center;
@@ -28,6 +28,8 @@
     padding: 20px 20px 80px;
     background-repeat: no-repeat;
     background-position: right bottom;
+    -webkit-background-size: cover;
+    background-size: cover;
     height: 150px;
     @media screen and (min-width: $tablet-width) {
         height: 290px;
@@ -38,9 +40,6 @@
     }
     &_lg {
         background-image: url(../assets/img/services/services-1.jpg);
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-repeat: no-repeat;
         background-position: center center;
 
     }

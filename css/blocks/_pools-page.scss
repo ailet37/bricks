@@ -1,7 +1,7 @@
 .teaser {
     padding: 30px 0;
     background-color: rgba(75, 128, 200, 0.65);
-    color:#fff;
+    color: #fff;
 
     @media screen and (min-width: $tablet-width) {
         padding: 40px 0;
@@ -29,6 +29,13 @@
     @media screen and (min-width: $tablet-width) {
         padding: 45px 0;
     }
+
+    &__row:nth-child(even) {
+        @media screen and (min-width: $tablet-width) {
+            flex-direction: row-reverse;
+        }
+    }
+
     &__row + &__row {
         margin-top: 30px;
         @media screen and (min-width: $tablet-width) {
@@ -38,6 +45,7 @@
             margin-top: 80px;
         }
     }
+
     @media screen and (max-width: $desktop-width) {
         &__row:last-child {
             margin-top: 0;
@@ -97,21 +105,32 @@
 }
 
 .calculate {
-    padding: 27px 20px;
-    background-image: url(assets/img/water-bg.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    margin: 0 -15px;
+    margin: 30px 0;
     @media screen and (min-width: $tablet-width) {
-        padding: 60px 65px;
-        margin: 0;
-        border-radius: 10px;
+        margin: 50px 0;
     }
     @media screen and (min-width: $desktop-width) {
-        padding: 90px 65px;
+        margin: 90px 0;
     }
+
+    &__inner {
+        padding: 27px 20px;
+        background-image: url(assets/img/water-bg.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff;
+        margin: 0 -15px;
+        @media screen and (min-width: $tablet-width) {
+            padding: 60px 65px;
+            margin: 0;
+            border-radius: 10px;
+        }
+        @media screen and (min-width: $desktop-width) {
+            padding: 90px 65px;
+        }
+    }
+
     &__title {
 
     }
@@ -251,5 +270,16 @@
             padding: 0 30px;
         }
     }
+}
 
+.sauna-types {
+
+
+    &__title {
+        margin: 10px 0;
+        text-align: center;
+        @media screen and (min-width: $tablet-width) {
+            margin: 20px 0;
+        }
+    }
 }
