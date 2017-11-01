@@ -43,6 +43,9 @@
 
     &:hover {
         color: lighten($main-blue, 10%);
+        .link__text {
+            border-color: lighten(#4b80c8, 10%);
+        }
     }
 }
 

@@ -56,6 +56,12 @@
     &__menu li + li {
         margin-left: 15px;
     }
+    &__menu li a {
+        transition: all .2s ease-in;
+        &:hover {
+            color: lighten(#000000, 20%);
+        }
+    }
     &__menu-item + &__menu-item {
         margin-left: 15px;
     }
@@ -76,10 +82,16 @@
             height: 56px;
         }
     }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+    }
     &__phone {
         font: 900 26px/1em Museo;
         color: $main-blue;
-
+        &:hover {
+            color: darken($main-blue, 10%);
+        }
     }
     &__callback {
         padding: 5px;
@@ -87,7 +99,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-
         svg {
             width: 18px;
             height: 18px;
@@ -95,21 +106,7 @@
 
     }
     &__callback-link {
-        font: 14px/1em Museo;
-        color: $main-blue;
-        position: relative;
         margin-left: 5px;
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            height: 1px;
-            background-color: $main-blue;
-            opacity: 0.5;
-            width: 100%;
-            left: 0;
-        }
-
     }
 }
 

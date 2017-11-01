@@ -64,6 +64,11 @@
 			margin-left: 14px;
 		}
 	}
+	&__menu li a {
+		&:hover {
+			color: darken(#ffffff, 20%);
+		}
+	}
 	&__phone {
 		font: 900 25px/1em Museo;
 		color: #fff;

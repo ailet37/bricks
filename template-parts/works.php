@@ -33,7 +33,7 @@
                             <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/arrow.svg'); ?>
                         </button>
 
-                        <div class="works__slider-pag js-works-pag">1/10</div>
+                        <div class="works__slider-pag js-works-pag"></div>
 
                         <button class="works__nav-next circle-btn center-svg js-works-next">
                             <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/arrow.svg'); ?>

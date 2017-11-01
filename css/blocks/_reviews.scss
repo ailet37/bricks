@@ -73,25 +73,11 @@
         margin-bottom: 16px;
     }
     &__link {
-        font: 500 14px/1em Museo;
-        color: $main-blue;
         display: flex;
         align-items: center;
-
     }
     &__link-text {
-        position: relative;
         margin-left: 5px;
-        &:after {
-            content: '';
-            bottom: 0;
-            position: absolute;
-            background-color: $main-blue;
-            opacity: 0.5;
-            left: 0;
-            width: 100%;
-            height: 1px;
-        }
     }
     &__author {
         font: 900 16px/1em Museo;

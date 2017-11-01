@@ -11,8 +11,12 @@
   padding: 15px 45px;
   text-transform: uppercase;
   width: 100%;
+  transition:all .2s ease-in;
   @media screen and (min-width: $tablet-width) {
     width: auto;
+  }
+  &:hover {
+    background-color: darken($main-green, 10%);
   }
 
 }
@@ -24,4 +28,9 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  transition:all .2s ease-in;
+  &:hover {
+    background-color: darken($main-green, 10%);
+  }
+
 }

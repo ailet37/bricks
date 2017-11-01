@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-lg-5">
-                <h1 class="partners__header-title title-md">ООО «Брикс» — надежный партнер</h1>
-                <div class="text-md">
+                <h2 class="partners__header-title title-md">ООО «Брикс» — надежный партнер</h2>
+                <p class="text-md">
                     По их почти единодушному мнению, действие существенно представляет собой ролевой контраст.
                     Конечно, нельзя не принять во внимание тот факт, что самость возможна.
                     <br><br>
                     Все это побудило нас обратить внимание на то, что действие мгновенно выбирает ролевой
                     эскапизм. Проекция возможна. Сновидение важно представляет собой
-                </div>
+                </p>
                 <div class="partners__btn btn">БОЛЬШЕ О КОМПАНИИ</div>
             </div>
             <div class="col-lg-1 hidden-sm-down">
