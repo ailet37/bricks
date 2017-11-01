@@ -122,6 +122,7 @@ Template Name: Front Page
     </div>
 </section>
 
+<?php get_template_part('template-parts/works'); ?>
 <?php get_template_part('template-parts/partners'); ?>
 <?php get_template_part('template-parts/reviews'); ?>
 

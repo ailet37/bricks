@@ -6,6 +6,18 @@
             paginationClickable: true
         });
     }
+    if ($('.js-works-slider').length) {
+        var worksSlider = new Swiper('.js-works-slider', {
+            pagination: '.js-works-pag',
+            paginationType: 'fraction',
+            prevButton: '.js-works-prev',
+            nextButton: '.js-works-next',
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 1500,
+            paginationClickable: true
+        });
+    }
 })();
 
 

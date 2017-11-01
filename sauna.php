@@ -180,14 +180,13 @@ Template Name: Sauna Page
 <section class="seo-post">
     <div class="container">
 
-        <h1 class="seo-post__title title-md">Какой-то заголовок</h1>
-        <div class="seo-post__text">
-            По их почти единодушному мнению, действие существенно представляет собой ролевой контраст. Конечно,
-            нельзя не принять во внимание тот факт, что самость возможна.
-            <br><br>
-            Все это побудило нас обратить внимание на то, что действие мгновенно выбирает ролевой эскапизм.
-            Проекция возможна. Сновидение важно представляет собой кризис.
-        </div>
+        <h1 class="seo-post__title title-md"><?php echo get_the_title(); ?></h1>
+
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <div class="seo-post__text">
+                    <?php the_content(); ?>
+            </div>
+            <?php endwhile; endif; ?>
 
 </section>
 
