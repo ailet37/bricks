@@ -12,7 +12,8 @@
             paginationType: 'fraction',
             prevButton: '.js-works-prev',
             nextButton: '.js-works-next',
-            slidesPerView: 1,
+            //slidesPerView: 1,
+            slidesPerView: 'auto',
             spaceBetween: 20,
             speed: 1500,
             paginationClickable: true
