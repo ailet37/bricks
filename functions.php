@@ -40,9 +40,9 @@ function my_mce_before_init_insert_formats($init_array)
         */
         array(
             'title' => 'Аннотация',
-            'block' => 'span',
-            'classes' => 'post__annotation',
-            'wrapper' => true,
+            'block' => "div",
+            'classes' => "post__annotation",
+            'wrapper' => false,
 
         ),
 //        array(
@@ -71,5 +71,16 @@ add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
 
 add_editor_style('custom-editor-style.css');
 
+//поддержка миниатюр поста
 add_theme_support( 'post-thumbnails' );
-?>
+
+//укорачиваем excerpt
+function new_excerpt_length($length) {
+    return 8;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+add_filter('excerpt_more', function($more) {
+    return '...';
+});
+

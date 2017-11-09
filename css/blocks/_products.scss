@@ -18,6 +18,12 @@
         overflow: hidden;
         margin-bottom: 20px;
         display: inline-block;
+        width: 370px;
+        height: 370px;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
 
         img {
             max-width:100%;

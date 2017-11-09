@@ -8,7 +8,8 @@
 }
 
 .post__annotation {
-    font: 500 14px/1.33em Museo;
+    font: 300 18px/1.33em Museo;
     color: #494949;
     display: block;
+    margin: 15px 0;
 }

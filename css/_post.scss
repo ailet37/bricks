@@ -1,7 +1,7 @@
 .post {
     margin: 25px 0;
     @media screen and (min-width: $desktop-width) {
-        margin: 55px 0;
+        margin: 25px 0;
     }
 
     p {
@@ -17,9 +17,10 @@
     }
 
     &__annotation {
-        font: 500 14px/1.33em Museo;
+        font: 300 14px/1.33em Museo;
         color: #494949;
         display: block;
+        margin: 25px 0;
         @media screen and (min-width: $tablet-width) {
             font-size: 14px;
         }
