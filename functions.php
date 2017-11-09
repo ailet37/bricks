@@ -70,3 +70,6 @@ add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
 
 
 add_editor_style('custom-editor-style.css');
+
+add_theme_support( 'post-thumbnails' );
+?>

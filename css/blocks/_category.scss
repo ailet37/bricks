@@ -55,6 +55,10 @@
         margin-right: 10px;
         position: relative;
         overflow: hidden;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
         img {
             display: block;
             max-width: 100%;
@@ -62,8 +66,8 @@
         }
         @media screen and (min-width: $tablet-width) {
             flex: auto;
-            width: 100%;
-            height: 100%;
+            width: 270px;
+            height: 270px;
 
             margin-right: 0;
             margin-bottom: 10px;
