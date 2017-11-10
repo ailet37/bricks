@@ -16,7 +16,6 @@
 
                 <div class="breadcrumbs breadcrumbs_blue hidden-sm-up">
                     <a href="/" class="breadcrumbs__item">Главная</a>
-                    <a href="" class="breadcrumbs__item">Химические средства для бассейнов</a>
                 </div>
 
                 <div class="product-page__title title-sm hidden-sm-up">
@@ -49,7 +48,6 @@
                 <div class="product-page__post">
                     <div class="breadcrumbs breadcrumbs_blue hidden-xs-down">
                         <a href="/" class="breadcrumbs__item">Главная</a>
-                        <a href="" class="breadcrumbs__item">Химические средства для бассейнов</a>
                     </div>
 
                     <h1 class="product-page__title title-md" title="<?php the_title(); ?>">

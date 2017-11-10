@@ -84,3 +84,8 @@ add_filter('excerpt_more', function($more) {
     return '...';
 });
 
+function page_excerpt() {
+    add_post_type_support('page', array('excerpt'));
+}
+add_action('init', 'page_excerpt');
+//Добавление "Цитаты" для страниц end

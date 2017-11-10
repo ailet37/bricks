@@ -71,6 +71,16 @@
         position: relative;
         border-radius: 10px;
         margin: 45px 0px;
+        p {
+            font: 300 14px/1.33em Museo;
+            color: #494949;
+            @media screen and (min-width: $tablet-width) {
+                font-size: 14px;
+            }
+            @media screen and (min-width: $desktop-width) {
+                font-size: 18px;
+            }
+        }
         @media screen and (min-width: $tablet-width) {
             font-size: 14px;
         }
@@ -78,13 +88,38 @@
             font-size: 18px;
         }
         &:before {
-            content: "\f205";
+            content: "";
+            background-image: url(assets/svg/quote.svg);
             position: absolute;
-            left: 0;
-            top: 0;
-            color: green;
+            left: 25px;
+            top: 25px;
+            width: 39px;
+            height: 39px;
+            background-repeat: no-repeat;
         }
 
+    }
+
+    ul {
+        margin: 20px 0;
+        li {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.29;
+            color:#3d3d3d;
+            padding-left: 33px;
+            margin: 4px 0;
+            position: relative;
+            &:before {
+                content:'';
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 24px;
+                height: 1px;
+                background-color: #44d4a8;
+            }
+        }
     }
     .wp-caption.alignright {
         margin: 30px 0;
