@@ -43,12 +43,19 @@ Template Name: Contacts Page
 
         <div class="contacts__form-block">
             <div class="contacts__form-title">ЗАДАТЬ ВОПРОС</div>
-            <form action="wp-admin/admin-post.php" method="post" class="contacts__form">
-                <input type="text" class="input" placeholder="Ваше имя">
-                <input type="text" class="input" placeholder="Ваш email">
-                <textarea class="textarea" placeholder="Ваше сообщение"></textarea>
-                    <button type="submit" class="contacts__form-btn btn">Отправить вопрос</button>
-            </form>
+
+            <?php while ( have_posts() ) : the_post(); ?>
+            <?php   the_content(); ?>
+                <?php
+            endwhile; //resetting the page loop
+            wp_reset_query(); //resetting the page query
+            ?>
+<!--            <form action="wp-admin/admin-post.php" method="post" class="contacts__form">-->
+<!--                <input type="text" class="input" placeholder="Ваше имя">-->
+<!--                <input type="text" class="input" placeholder="Ваш email">-->
+<!--                <textarea class="textarea" placeholder="Ваше сообщение"></textarea>-->
+<!--                    <button type="submit" class="contacts__form-btn btn">Отправить вопрос</button>-->
+<!--            </form>-->
         </div>
     </div>
     </div>

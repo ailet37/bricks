@@ -48,7 +48,11 @@
         }
     }
 }
-
+.form {
+    p + p {
+        margin-top: 10px;
+    }
+}
 .input {
     border-radius: 10px;
     background-color: #f2f9fc;
