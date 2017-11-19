@@ -7,7 +7,7 @@ Template Name: Front Page
 <?php get_header(); ?>
 
 <?php
-$args_qry = array('category' => 6, 'post_type' => 'post');
+$args_qry = array('category' => 24, 'post_type' => 'post');
 $postslist = get_posts($args_qry);
 $posts_count = count($postslist);
 if ($postslist) { ?>

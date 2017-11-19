@@ -4,6 +4,17 @@
         margin: 15px 0 20px;
     }
 
+    .breadcrumbs {
+        color:$main-blue;
+        .breadcrumbs__item {
+            border-bottom: solid 1px rgba(75, 128, 200, 0.5);
+            &._active {
+                border: none;
+                pointer-events: none;
+            }
+        }
+    }
+
     &__item {
         margin: 22px 0;
         @media screen and (min-width: $tablet-width) {
@@ -18,12 +29,12 @@
         overflow: hidden;
         margin-bottom: 20px;
         display: inline-block;
-        width: 370px;
-        height: 370px;
+        width: 100%;
         -webkit-background-size: cover;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        padding-top: 100%;
 
         img {
             max-width:100%;

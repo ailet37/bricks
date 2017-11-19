@@ -14,11 +14,8 @@
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-lg-4">
 
-                <div class="breadcrumbs breadcrumbs_blue hidden-sm-up">
-                    <a href="/" class="breadcrumbs__item">Главная</a>
-                </div>
-
                 <div class="product-page__title title-sm hidden-sm-up">
+                    <?php get_template_part('breadcrumbs'); ?>
                     <?php the_title(); ?>
                 </div>
 
@@ -46,9 +43,7 @@
             <div class="col-xs-12 col-sm-8 col-lg-8">
 
                 <div class="product-page__post">
-                    <div class="breadcrumbs breadcrumbs_blue hidden-xs-down">
-                        <a href="/" class="breadcrumbs__item">Главная</a>
-                    </div>
+                    <?php get_template_part('breadcrumbs'); ?>
 
                     <h1 class="product-page__title title-md" title="<?php the_title(); ?>">
                         <?php the_title(); ?>

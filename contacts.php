@@ -5,10 +5,6 @@ Template Name: Contacts Page
 ?>
 <?php get_header(); ?>
 
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCacI9eBtbw4m3Vgcpiu6cE2ueBL3_huog">
-</script>
-
 <section class="contacts">
     <div class="contacts__map" id="map"></div>
     <div class="container">
@@ -61,4 +57,10 @@ Template Name: Contacts Page
     </div>
 </section>
 
+
+
 <?php get_footer(); ?>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCacI9eBtbw4m3Vgcpiu6cE2ueBL3_huog&callback=initMap">
+</script>

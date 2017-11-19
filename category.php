@@ -14,11 +14,7 @@ $children_categories = get_categories('parent=' . $cat . '');
     <section class="category-header">
         <div class="container">
 
-            <div class="breadcrumbs">
-                <a href="/" class="breadcrumbs__item">Главная</a>
-                <a href="" class="breadcrumbs__item _active"><?php single_cat_title(); ?></a>
-
-            </div>
+            <?php get_template_part('breadcrumbs'); ?>
 
             <h1 class="category-header__title title-md"><?php single_cat_title(); ?></h1>
 
@@ -32,33 +28,41 @@ $children_categories = get_categories('parent=' . $cat . '');
     <section class="category">
         <div class="container">
             <div class="row">
-
+                <?php  $news_query  = new WP_Query; ?>
                 <?php if ($children_categories): // если есть дочерние категории ?>
                     <?php foreach ($children_categories as $children_category): ?>
-                        <?php $link = get_category_link($children_category->cat_ID); ?>
+                        <?php
 
-                        <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
-                            <a href="<?php echo $link; ?>" class="category__inner">
-                                <div class="category__img" style="background-image: url();">
-                                    <img src="<?php bloginfo("template_directory"); ?>/assets/img/products/product.jpg"
-                                         alt="">
-                                </div>
-                                <div class="category__item-info">
-                                    <div class="category__title link">
-                                        <div class="link__text"><?php echo $children_category->name; ?></div>
+                        //ссылка на рубрику
+                        $link = get_category_link($children_category->cat_ID);
+                        //берем первый пост категории, из него - обложку
+                        $news_query->query( array(
+                            'cat'                 => $children_category->cat_ID,
+                            'posts_per_page'      => 1,
+                            'no_found_rows'       => true,
+                            'ignore_sticky_posts' => true,
+                        ));
+                        ?>
+                        <?php while ( $news_query->have_posts() ) : $news_query->the_post() ?>
+                            <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
+                                <a href="<?php echo $link; ?>" class="category__inner">
+                                    <div class="category__img" style="background-image: url(<?php echo the_post_thumbnail_url('large'); ?>);"></div>
+                                    <div class="category__item-info">
+                                        <div class="category__title link">
+                                            <div class="link__text"><?php echo $children_category->name; ?></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+                        <?php endwhile ?>
                     <?php endforeach; ?>
-
                 <?php else: // иначе - выводим записи ?>
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
                                 <a href="<?php the_permalink(); ?>" class="category__inner" title="<?php the_title(); ?>">
                                     <div class="category__img"
-                                         style="background-image: url(<?php the_post_thumbnail_url(200, 200); ?>);">
+                                         style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);">
                                     </div>
                                     <div class="category__item-info">
                                         <div class="category__title link">
@@ -87,7 +91,6 @@ $children_categories = get_categories('parent=' . $cat . '');
             <?php show_descr_bottom($cat); // выводим нижнее описание категории ?>
         </div>
     </section>
-
 
 
 <?php get_footer(); ?>

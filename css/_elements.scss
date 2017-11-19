@@ -1,6 +1,6 @@
 .breadcrumbs {
     font: 500 14px/1.31em Museo;
-
+    color:#fff;
     &__item {
         display: inline-block;
         vertical-align: middle;
@@ -21,13 +21,6 @@
     }
     &_light {
         color:#fff;
-    }
-    &_blue {
-        color:#4b80c8;
-        .breadcrumbs__item {
-            border-bottom: solid 1px rgba(75, 128, 200, 0.5);
-        }
-
     }
 }
 
@@ -80,4 +73,47 @@
     @extend .input;
     height:125px;
 
+}
+.form {
+    position: relative;
+}
+.wpcf7-validation-errors {
+    margin: 0;
+    padding: 0.2em 1em;
+    position: absolute;
+    bottom: -67px;
+    background: white;
+    display: none;
+}
+.wpcf7-not-valid {
+    border: 1px solid rgba(red, 0.4);
+    color: rgba(red, 0.4);
+}
+span.wpcf7-not-valid-tip {
+    display: none;
+}
+.wpcf7-mail-sent-ok {
+    position: absolute;
+    background: white;
+    animation-name: appear-message;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    text-align: center;
+}
+
+@keyframes appear-message {
+    0% {
+        opacity: 0;
+        transform:translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform:translateY(-300px);
+    }
+    100% {
+        opacity: 0;
+        transform:translateY(300px);
+        visibility: hidden;
+    }
 }
