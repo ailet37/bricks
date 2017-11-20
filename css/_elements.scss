@@ -115,5 +115,6 @@ span.wpcf7-not-valid-tip {
         opacity: 0;
         transform:translateY(300px);
         visibility: hidden;
+        //z-index: -1;
     }
 }

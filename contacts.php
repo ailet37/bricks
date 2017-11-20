@@ -9,10 +9,7 @@ Template Name: Contacts Page
     <div class="contacts__map" id="map"></div>
     <div class="container">
     <div class="contacts__block">
-        <div class="breadcrumbs breadcrumbs_blue">
-            <a href="/" class="breadcrumbs__item">Главная</a>
-            <a href="" class="breadcrumbs__item">Контакты</a>
-        </div>
+        <?php get_template_part('breadcrumbs'); ?>
         <h1 class="contacts__title title-md">Контакты</h1>
 
         <div class="contacts__line">

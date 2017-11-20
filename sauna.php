@@ -9,16 +9,13 @@ Template Name: Sauna Page
     <div class="container">
         <?php get_template_part('breadcrumbs'); ?>
         <div class="teaser__info">
-            <div class="teaser__title title-md">
-                Строительство
-                бань, саун, хамамов
-            </div>
+            <h1 class="teaser__title title-md" title="<?php the_title(); ?>">
+                <?php the_title(); ?>
+            </h1>
             <div class="teaser__descr">
-                Обслуживание домашнего бассейна либо бассейна общественного пользования представляет собой довольно
-                сложную и дорогостоящую процедуру. Поэтому для покупателей важно найти такой магазин химии для
-                бассейнов, который предлагает не только высокое качество, но и приемлемые цены.
+                <?php the_excerpt(); ?>
             </div>
-            <div class="teaser__btn btn">РАССЧИТАТЬ СТОИМОСТЬ</div>
+            <a href="#calculate" class="teaser__btn btn">РАССЧИТАТЬ СТОИМОСТЬ</a>
         </div>
     </div>
 </section>
@@ -134,7 +131,7 @@ Template Name: Sauna Page
     </div>
 </section>
 
-<section class="calculate">
+<section class="calculate" id="calculate">
     <div class="container">
         <div class="calculate__inner">
 
@@ -179,19 +176,18 @@ Template Name: Sauna Page
 
 <section class="seo-post">
     <div class="container">
-
-        <h1 class="seo-post__title title-md"><?php echo get_the_title(); ?></h1>
-
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <div class="seo-post__text">
-                    <?php the_content(); ?>
-            </div>
-            <?php endwhile; endif; ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <div class="seo-post__text">
+          <?php the_content(); ?>
+      </div>
+    <?php endwhile; endif; ?>
 
 </section>
 
 <?php get_template_part('template-parts/partners'); ?>
-<?php get_template_part('template-parts/reviews'); ?>
+
+<?php $tag = 'sauna' ?>
+<?php include(locate_template('template-parts/reviews.php')); ?>
 
 
 <?php get_footer(); ?>

@@ -73,7 +73,7 @@ $children_categories = get_categories('parent=' . $cat . '');
                                         </div>
                                         <?php $price = get_post_meta($post->ID, 'Цена', true ); ?>
                                         <?php if ($price) : ?>
-                                            <span class="category__price"><?php echo $price; ?> ₽</span>
+                                            <span class="category__price"><?php echo $price; ?> руб</span>
                                         <?php endif; ?>
                                     </div>
                                 </a>

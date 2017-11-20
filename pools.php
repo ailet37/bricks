@@ -10,15 +10,12 @@ Template Name: Pools Page
         <?php get_template_part('breadcrumbs'); ?>
         <div class="teaser__info">
             <div class="teaser__title title-md">
-                Строительство
-                бассейнов
+                <?php the_title(); ?>
             </div>
             <div class="teaser__descr">
-                Обслуживание домашнего бассейна либо бассейна общественного пользования представляет собой довольно
-                сложную и дорогостоящую процедуру. Поэтому для покупателей важно найти такой магазин химии для
-                бассейнов, который предлагает не только высокое качество, но и приемлемые цены.
+                <?php the_excerpt(); ?>
             </div>
-            <div class="teaser__btn btn">РАССЧИТАТЬ СТОИМОСТЬ</div>
+            <a href="#calculate" class="teaser__btn btn">РАССЧИТАТЬ СТОИМОСТЬ</a>
         </div>
     </div>
 </section>
@@ -104,7 +101,7 @@ Template Name: Pools Page
     </div>
 </section>
 
-<section class="calculate">
+<section class="calculate" id="calculate">
     <div class="container">
         <div class="calculate__inner">
 
@@ -214,20 +211,18 @@ Template Name: Pools Page
 
 <section class="seo-post">
     <div class="container">
-
-        <h1 class="seo-post__title title-md">Какой-то заголовок</h1>
         <div class="seo-post__text">
-            По их почти единодушному мнению, действие существенно представляет собой ролевой контраст. Конечно,
-            нельзя не принять во внимание тот факт, что самость возможна.
-            <br><br>
-            Все это побудило нас обратить внимание на то, что действие мгновенно выбирает ролевой эскапизм.
-            Проекция возможна. Сновидение важно представляет собой кризис.
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php the_content(); ?>
+            <?php endwhile; endif; ?>
         </div>
-
 </section>
 
 <?php get_template_part('template-parts/partners'); ?>
-<?php get_template_part('template-parts/reviews'); ?>
+
+
+<?php $tag = 'pools' ?>
+<?php include(locate_template('template-parts/reviews.php')); ?>
 
 
 <?php get_footer(); ?>

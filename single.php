@@ -29,7 +29,7 @@
                         <?php if ($price) : ?>
                         <div class="product-page__info">
                             <div class="product-page__label">ЦЕНА</div>
-                            <div class="product-page__price"><?php echo $price; ?> ₽</div>
+                            <div class="product-page__price"><?php echo $price; ?> руб</div>
                         </div>
                         <?php endif; ?>
                         <div class="product-page__btn btn">Заказать</div>
@@ -42,7 +42,7 @@
             <?php while ( have_posts() ) : the_post(); ?>
             <div class="col-xs-12 col-sm-8 col-lg-8">
 
-                <div class="product-page__post">
+                <div class="product-page__post post">
                     <?php get_template_part('breadcrumbs'); ?>
 
                     <h1 class="product-page__title title-md" title="<?php the_title(); ?>">
