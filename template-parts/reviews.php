@@ -1,6 +1,6 @@
 
 <?php
-$args_qry = array('category' => 8, 'post_type' => 'post', 'posts_per_page' => 3, 'tag' => $tag);
+$args_qry = array('category' => 25, 'post_type' => 'post', 'posts_per_page' => 3, 'tag' => $tag);
 $postslist = get_posts($args_qry);
 ?>
 <?php if ($postslist) : ?>
