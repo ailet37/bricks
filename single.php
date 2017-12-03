@@ -25,15 +25,16 @@
 
                     <?php $price = get_post_meta($post->ID, 'Цена', true ); ?>
 
+                    <?php if ($price) : ?>
                     <div class="product-page__order">
-                        <?php if ($price) : ?>
+
                         <div class="product-page__info">
                             <div class="product-page__label">ЦЕНА</div>
                             <div class="product-page__price"><?php echo $price; ?> руб</div>
                         </div>
-                        <?php endif; ?>
                         <div class="product-page__btn btn">Заказать</div>
                     </div>
+                    <?php endif; ?>
 
                 </div>
 

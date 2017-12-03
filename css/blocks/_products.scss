@@ -18,9 +18,9 @@
     &__item {
         margin: 22px 0;
         @media screen and (min-width: $tablet-width) {
-            border-bottom: 1px solid #e3e3e3;
+           // border-bottom: 1px solid #e3e3e3;
             margin: 0;
-            padding-bottom: 30px;
+           // padding-bottom: 30px;
         }
     }
     &__img {

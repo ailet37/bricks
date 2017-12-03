@@ -9,7 +9,7 @@ $posts_list = get_posts($args_qry);
     <div class="container">
         <div class="reviews__header">
             <h3 class="reviews__title title-md">Отзывы клиентов</h3>
-            <a href="" class="reviews__btn">
+            <a href="/otzyvy/" class="reviews__btn">
                 <span class="reviews__btn-text">Все <span class="hidden-xs-down">отзывы</span></span>
                 <div class="circle-btn center-svg">
                     <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/arrow.svg'); ?>
@@ -24,8 +24,8 @@ $posts_list = get_posts($args_qry);
                     <div class="reviews__text">
                         <?php the_content(); ?>
                     </div>
-                    <a href="/" class="reviews__link link">
-                        <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/attachment.svg'); ?>
+                    <a href="<?php the_permalink(); ?>" class="reviews__link link">
+<!--                        --><?php //echo file_get_contents(get_template_directory_uri() . '/assets/svg/attachment.svg'); ?>
 
                         <span class="reviews__link-text link__text">Оригинал отзыва</span>
                     </a>
