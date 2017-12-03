@@ -83,14 +83,14 @@
     position: absolute;
     bottom: -67px;
     background: white;
-    display: none;
+    display: none!important;
 }
 .wpcf7-not-valid {
     border: 1px solid rgba(red, 0.4);
     color: rgba(red, 0.4);
 }
 span.wpcf7-not-valid-tip {
-    display: none;
+    display: none!important;
 }
 .wpcf7-mail-sent-ok {
     position: absolute;

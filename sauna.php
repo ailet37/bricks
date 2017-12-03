@@ -139,35 +139,35 @@ Template Name: Sauna Page
                 <div class="col-xs-12 col-sm-12 col-lg-5">
                     <h2 class="calculate__title title-md">
                         Закажите расчет
-                        стоимости бассейна
+                        стоимости бани
                     </h2>
                     <div class="calculate__text">
                         Обслуживание и ремонт бассейнов, хамамов, саун и SPA. Оборудование для бассейнов
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-lg-7">
-                    <form class="calculate__form">
 
-                        <div class="calculate__form-row row">
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" class="input" placeholder="Ваше имя">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="tel" class="input" placeholder="Номер телефона">
-                            </div>
-                        </div>
-                        <div class="calculate__form-row row">
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="calculate__form-btn btn">отправить заявку</div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="calculate__form-alarm">
-                                    Отправляя заявку, вы соглашаетесь
-                                    с политикой конфиденциальности
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        <?php echo do_shortcode( '[contact-form-7 id="207" title="Sauna cost" html_class="calculate__form"]' ); ?>
+
+<!--                        <div class="calculate__form-row row">-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <input type="text" class="input" placeholder="Ваше имя">-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <input type="tel" class="input" placeholder="Номер телефона">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="calculate__form-row row">-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <div class="calculate__form-btn btn">отправить заявку</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <div class="calculate__form-alarm">-->
+<!--                                    Отправляя заявку, вы соглашаетесь-->
+<!--                                    с политикой конфиденциальности-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                 </div>
             </div>
         </div>

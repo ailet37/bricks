@@ -52,8 +52,10 @@
         </div>
     </div>
 </footer>
+<?php wp_footer(); ?>
+<script type="text/javascript" src="<?php bloginfo("template_directory");?>/js/lib/jquery/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo("template_directory");?>/js/lib/swiper/js/swiper.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo("template_directory");?>/js/script.js"></script>
 </body>
-    <script type="text/javascript" src="<?php bloginfo("template_directory");?>/js/lib/jquery/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo("template_directory");?>/js/lib/swiper/js/swiper.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo("template_directory");?>/js/script.js"></script>
+
 </html>

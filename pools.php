@@ -81,6 +81,12 @@ Template Name: Pools Page
         </div>
         <div class="advantages__row row">
             <div class="col-xs-12 col-sm-6 col-lg-6">
+                <div class="advantages__img">
+                    <img src="<?php bloginfo("template_directory"); ?>/assets/img/pools/pools-3.jpg" alt="">
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-6">
                 <div class="advantages__about">
                     <h2 class="advantages__title title-md">
                         Сборные бассейны
@@ -91,12 +97,6 @@ Template Name: Pools Page
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-lg-6">
-                <div class="advantages__img">
-                    <img src="<?php bloginfo("template_directory"); ?>/assets/img/pools/pools-3.jpg" alt="">
-
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -104,7 +104,6 @@ Template Name: Pools Page
 <section class="calculate" id="calculate">
     <div class="container">
         <div class="calculate__inner">
-
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-lg-5">
@@ -117,41 +116,40 @@ Template Name: Pools Page
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-lg-7">
-                    <form class="calculate__form">
-                        <div class="calculate__form-row row">
-                            <div class="col-xs-12 col-sm-6">
-                                <input id="after" type="text" class="input calculate__form-input"
-                                       placeholder="Длина,см">
-                                <input type="text" class="input calculate__form-input" placeholder="Ширина,см">
-                                <input type="text" class="input calculate__form-input" placeholder="Глубина,см">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <select name="" id="" class="select">
-                                    <option value="">Выберите материал</option>
-                                    <option value="">материальчик</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="calculate__form-row row">
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="text" class="input" placeholder="Ваше имя">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <input type="tel" class="input" placeholder="Номер телефона">
-                            </div>
-                        </div>
-                        <div class="calculate__form-row row">
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="calculate__form-btn btn">отправить заявку</div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="calculate__form-alarm">
-                                    Отправляя заявку, вы соглашаетесь
-                                    с политикой конфиденциальности
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        <?php echo do_shortcode( '[contact-form-7 id="205" title="Pools cost" html_class="calculate__form"]' ); ?>
+<!--                        <div class="calculate__form-row row">-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <input id="after" type="text" class="input calculate__form-input"-->
+<!--                                       placeholder="Длина,см">-->
+<!--                                <input type="text" class="input calculate__form-input" placeholder="Ширина,см">-->
+<!--                                <input type="text" class="input calculate__form-input" placeholder="Глубина,см">-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <select name="" id="" class="select">-->
+<!--                                    <option value="">Выберите материал</option>-->
+<!--                                    <option value="">материальчик</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="calculate__form-row row">-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <input type="text" class="input" placeholder="Ваше имя">-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <input type="tel" class="input" placeholder="Номер телефона">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="calculate__form-row row">-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <div class="calculate__form-btn btn">отправить заявку</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-12 col-sm-6">-->
+<!--                                <div class="calculate__form-alarm">-->
+<!--                                    Отправляя заявку, вы соглашаетесь-->
+<!--                                    с политикой конфиденциальности-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                 </div>
             </div>
         </div>

@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 
 <head>
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
     <meta charset="utf-8">
-    <?php wp_head(); ?>
-    <link rel="shortcut icon" href="<?php bloginfo("template_directory");?>/favicon.ico" type="image/x-icon">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="shortcut icon" href="<?php bloginfo("template_directory");?>/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="<?php bloginfo("template_directory");?>/style.css">
-
-
 </head>
-
+<?php wp_head(); ?>
 <body>
 
 <header class="header">

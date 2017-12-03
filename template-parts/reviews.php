@@ -1,9 +1,10 @@
+<?php $category_reviews_id = get_cat_ID('Отзывы'); ?>
 
-<?php
-$args_qry = array('category' => 25, 'post_type' => 'post', 'posts_per_page' => 3, 'tag' => $tag);
-$postslist = get_posts($args_qry);
+<?php if ($category_reviews_id) {
+$args_qry = array('category' => $category_reviews_id, 'post_type' => 'post', 'posts_per_page' => 3, 'tag' => $tag);
+$posts_list = get_posts($args_qry);
 ?>
-<?php if ($postslist) : ?>
+<?php if ($posts_list) : ?>
 <section class="reviews">
     <div class="container">
         <div class="reviews__header">
@@ -17,7 +18,7 @@ $postslist = get_posts($args_qry);
         </div>
 
         <div class="row">
-            <?php foreach ($postslist as $post) : setup_postdata( $post );  ?>
+            <?php foreach ($posts_list as $post) : setup_postdata( $post );  ?>
             <div class="col-xs-12 col-sm-4 col-lg-4 reviews__item">
                 <div class="reviews__review">
                     <div class="reviews__text">
@@ -41,4 +42,4 @@ $postslist = get_posts($args_qry);
         </div>
     </div>
 </section>
-<?php endif; ?>
+<?php endif; } ?>

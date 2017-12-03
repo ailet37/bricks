@@ -15,6 +15,12 @@
             margin-top: 1em;
         }
     }
+    a {
+        color:$main-blue;
+        &:hover {
+            color: lighten($main-blue, 10%);
+        }
+    }
 
     &__annotation {
         font: 300 14px/1.33em Museo;
