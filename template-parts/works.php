@@ -1,15 +1,16 @@
+<?php $category_works_id = get_cat_ID('Наши работы'); ?>
+
+<?php if ($category_works_id) : ?>
 <section class="works">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-lg-5">
                 <article class="works__post">
-                    <h2 class="works__header-title title-md">Наши работы</h2>
-                    <p class="works__text text-md">
-                        Мы поможем Вам выбрать оптимальный размер,
-                        тип и форму будущего бассейна в зависимости от индивидуальных особенностей объекта и Ваших
-                        пожеланий.
-                    </p>
-                    <a href="" class="link">
+                    <h2 class="works__header-title title-md" title="<?php echo get_cat_name( $category_works_id ) ?>"><?php echo get_cat_name( $category_works_id ) ?></h2>
+                    <div class="works__text text-md">
+                        <?php echo category_description( $category_works_id ); ?>
+                    </div>
+                    <a href="<?php echo get_category_link( $category_works_id ); ?>" class="link">
                         <span class="link__text">
                             Все работы
                         </span>
@@ -49,3 +50,4 @@
         </div>
     </div>
 </section>
+<?php endif; ?>

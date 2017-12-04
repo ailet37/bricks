@@ -1,21 +1,21 @@
+<?php $category_partners_id = get_cat_ID('Партнеры'); ?>
+
 <section class="partners">
     <div class="container">
         <div class="row">
+            <?php if ($category_partners_id) : ?>
             <div class="col-xs-12 col-sm-12 col-lg-5">
-                <h2 class="partners__header-title title-md">ООО «Брикс» — надежный партнер</h2>
-                <p class="text-md">
-                    По их почти единодушному мнению, действие существенно представляет собой ролевой контраст.
-                    Конечно, нельзя не принять во внимание тот факт, что самость возможна.
-                    <br><br>
-                    Все это побудило нас обратить внимание на то, что действие мгновенно выбирает ролевой
-                    эскапизм. Проекция возможна. Сновидение важно представляет собой
-                </p>
-                <div class="partners__btn btn">БОЛЬШЕ О КОМПАНИИ</div>
+                <h2 class="partners__header-title title-md"><?php echo get_cat_name( $category_partners_id ) ?></h2>
+                <div class="text-md">
+                    <?php echo category_description( $category_partners_id ); ?>
+                </div>
+                <a href="/o-kompanii/" class="partners__btn btn">БОЛЬШЕ О КОМПАНИИ</a>
             </div>
             <div class="col-lg-1 hidden-sm-down">
             </div>
+            <?php endif; ?>
             <div class="col-xs-12 col-sm-12 col-lg-6">
-                <div class="partners__title">Наши партнеры</div>
+                <div title="Наши партнеры" class="partners__title">Наши партнеры</div>
 
                 <div class="partners__wrap">
 
@@ -53,3 +53,4 @@
         </div>
     </div>
 </section>
+
