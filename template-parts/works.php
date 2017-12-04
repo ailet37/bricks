@@ -23,9 +23,14 @@
                 <div class="works__wrap">
                     <div class="works__slider swiper-container js-works-slider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide works__banner"></div>
-                            <div class="swiper-slide works__banner"></div>
-                            <div class="swiper-slide works__banner"></div>
+                            <div class="swiper-slide works__banner" style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/works/1.jpg);"></div>
+                            <div class="swiper-slide works__banner" style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/works/2.jpg);"></div>
+                            <div class="swiper-slide works__banner" style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/works/3.jpg);"></div>
+                            <div class="swiper-slide works__banner" style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/works/4.jpg);"></div>
+                            <div class="swiper-slide works__banner" style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/works/5.jpg);"></div>
+                            <div class="swiper-slide works__banner" style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/works/6.jpg);"></div>
+                            <div class="swiper-slide works__banner" style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/works/7.jpg);"></div>
+                            <div class="swiper-slide works__banner" style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/works/8.jpg);"></div>
                         </div>
                     </div>
                     <div class="works__slider-nav">

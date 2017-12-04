@@ -20,33 +20,33 @@
                 <div class="partners__wrap">
 
                     <div class="partners__row">
-                        <a href="" class="partners__item">
+                        <a href="http://aqualeonpro.ru/" target="_blank" class="partners__item">
                             <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-1.png"
                                  alt="" class="center">
                         </a>
-                        <div class="partners__item">
+                        <a href="http://aquatics.su/" target="_blank" class="partners__item">
                             <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-2.png"
                                  alt="" class="center">
-                        </div>
-                        <div class="partners__item">
-                            <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-2.png"
+                        </a>
+                        <a href="http://cosba.ru/" target="_blank" class="partners__item">
+                            <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-3.png"
                                  alt="" class="center">
-                        </div>
+                        </a>
 
                     </div>
                     <div class="partners__row">
-                        <div class="partners__item">
-                            <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-1.png"
+                        <a href="http://www.acon.ru/" target="_blank" class="partners__item">
+                            <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-4.png"
                                  alt="" class="center">
-                        </div>
-                        <div class="partners__item">
-                            <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-1.png"
+                        </a>
+                        <a href="https://grilld.ru/" target="_blank" class="partners__item">
+                            <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-5.png"
                                  alt="" class="center">
-                        </div>
-                        <div class="partners__item">
-                            <img src="<?php bloginfo("template_directory"); ?>/assets/img/partners/partners-1.png"
-                                 alt="">
-                        </div>
+                        </a>
+<!--                        <div class="partners__item">-->
+<!--                            <img src="--><?php //bloginfo("template_directory"); ?><!--/assets/img/partners/partners-1.png"-->
+<!--                                 alt="">-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
