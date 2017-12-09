@@ -25,6 +25,25 @@
         }
     }
     &__menu {
+        @media screen and (max-width: $tablet-width) {
+            transform:translateX(-120%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: white;
+            z-index: 100;
+            height: 100%;
+            padding: 30px 10px 20px;
+            box-shadow: 5px 0 25px rgba(0,0,0,0.4);
+            transition: transform .4s ease-in;
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+            &._opened {
+                transform: translateX(0);
+            }
+        }
 
         @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
             padding: 20px 0;
@@ -46,15 +65,19 @@
         padding: 5px;
         display: inline-block;
         position: relative;
-        &:hover {
-            .sub-menu {
-                display: block;
+        @media screen and (min-width: $tablet-width) {
+            &:hover {
+                .sub-menu {
+                    display: block;
+                }
             }
         }
 
     }
     &__menu li + li {
-        margin-left: 15px;
+        @media screen and (min-width: $tablet-width) {
+            margin-left: 15px;
+        }
     }
     &__menu li a {
         transition: all .2s ease-in;
@@ -111,14 +134,20 @@
 }
 
 .sub-menu {
-    display: none;
-    position: absolute;
-    background: #f3f3f3;
-    border-radius: 10px;
-    padding: 10px 5px;
-    top: 22px;
     font-size: 13px;
     z-index: 99;
+    margin-top: 10px;
+    margin-left: 10px;
+    @media screen and (min-width: $tablet-width) {
+        background: #f3f3f3;
+        border-radius: 10px;
+        padding: 10px 5px;
+        top: 22px;
+        display: none;
+        position: absolute;
+        margin-top: 0;
+        margin-left: 0;
+    }
 
     li {
         font-size: 10px;

@@ -19,6 +19,27 @@
             paginationClickable: true
         });
     }
+
+    //header menu mobile
+    $('.js-open-mobile-menu').on('click', function() {
+        $('.js-menu').toggleClass('_opened');
+        $('body').toggleClass('_modal-opened');
+    });
+
+    $('.js-close-mobile-menu').on('click', function() {
+        $('.js-menu').toggleClass('_opened');
+        $('body').toggleClass('_modal-opened');
+    });
+
+    //modal
+    $('.js-callback-open').on('click', function() {
+        console.log('click')
+       $('.js-callback-modal').addClass('_shown');
+    });
+
+    $('.js-modal-close').on('click', function() {
+        $(this).closest('.modal').removeClass('_shown');
+    });
 })();
 
 
