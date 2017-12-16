@@ -33,12 +33,16 @@
 
     //modal
     $('.js-callback-open').on('click', function() {
-        console.log('click')
        $('.js-callback-modal').addClass('_shown');
     });
 
     $('.js-modal-close').on('click', function() {
         $(this).closest('.modal').removeClass('_shown');
+    });
+
+    //order
+    $('.js-order-open').on('click', function() {
+        $('.js-order-modal').addClass('_shown');
     });
 })();
 
@@ -149,3 +153,4 @@ function initMap() {
 }
 
 //google.maps.event.addDomListener(window, "load", initMap);
+

@@ -1,0 +1,396 @@
+$maincolor2: #2eb5a8;
+
+/* BEGIN: THE CALC */
+.theCalcKeeper{
+    position: relative;
+    margin: 30px 0;
+}
+.theCalc{
+    padding: 40px 20px 5px 20px;
+    border: 1px solid $maincolor2;
+    border-bottom: none;
+    > form {
+        display: block;
+        width: 65%;
+    }
+}
+
+.calcRow{
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+
+    input{
+        display: block;
+        width: 65px;
+        border: 2px solid $maincolor2;
+        padding: 4px 0 4px 0;
+        text-align: center;
+        margin-top: 8px;
+        transition: .3s ease-in;
+
+        &:active {
+            border-color: lighten($maincolor2, 10%);
+        }
+    }
+    .mkLeft + .mkLeft {
+        margin-left: 30px;
+    }
+}
+
+.calcPlus{
+    position: relative;
+    &:after {
+        content:'';
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 18px;
+        height: 18px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border:1px solid $maincolor2;
+        cursor: pointer;
+        margin: -45px 0 0 53px;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+    &:before {
+        content:'+';
+        position: absolute;
+        color:$maincolor2;
+        top: 0;
+        z-index: 3;
+        margin: -50px 0 0 56px;
+        font-size: 20px;
+    }
+}
+.calcMinus{
+    position: relative;
+    &:after {
+        content:'';
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 18px;
+        height: 18px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border:1px solid $maincolor2;
+        cursor: pointer;
+        margin: -17px 0 0 53px;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+    &:before {
+        content:'-';
+        position: absolute;
+        color:$maincolor2;
+        top: 0;
+        z-index: 3;
+        margin: -28px 0 0 58px;
+        font-size: 25px;
+    }
+}
+
+.theCalc label{
+    font-weight: normal;
+}
+
+.calcRow2 {
+    display: flex;
+    align-items: flex-start;
+    .mkLeft, .mkRight {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction:column;
+
+    }
+    .mkInner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .mkLeft {
+        .radioKeeper {
+            width: 50%;
+        }
+    }
+    .mkRight {
+        .radioKeeper {
+            width: 100%;
+        }
+    }
+
+}
+
+.calcRow2 label{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.calcRow2 .mkLeft > .radioKeeper{
+    width: 50%;
+}
+.theCalc .radioKeeper{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.theCalc .radioKeeper input{
+    display: none;
+}
+.theCalc .radioKeeper label{
+    text-decoration: none!important;
+    cursor: pointer;
+}
+.theCalc .radioKeeper input:checked + label em {
+    &:after {
+        content:'';
+        position: absolute;
+        top: calc(50% - 9px);
+        width: 8px;
+        left: 6px;
+        height: 12px;
+        border: solid $maincolor2;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
+.theCalc .radioKeeper label > em{
+    display: inline-block;
+    vertical-align: middle;
+    width: 19px;
+    height: 19px;
+    background-color: #eaeaea;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.theCalcPlus{
+    position: relative;
+    background: #e9e9e9;
+    padding: 21px 0px 70px 22px;
+
+    &:before {
+        content: "";
+        width: 20px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        background: #e9e9e9;
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }
+}
+.hints{
+    display: none;
+    position: absolute;
+    /* height: 330px; */
+    background: #FFF none repeat scroll 0% 0%;
+    z-index: 11;
+    padding: 32px 35px 35px;
+    left: -130px;
+    bottom: 45px;
+    border: 2px solid $maincolor2;
+    width: 375px;
+    font-size: 10pt;
+    &::after{
+        content: " ";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        bottom: -16px;
+        left: 175px;
+        z-index: 12;
+        background: white;
+        border-left: 2px solid $maincolor2;
+        border-bottom: 2px solid $maincolor2;
+        -moz-transform: rotate(-45deg);  /* Firefox */
+        -o-transform: rotate(-45deg);  /* Opera */
+        -webkit-transform: rotate(-45deg);  /* Safari y Chrome */
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865476, M12=0.7071067811865475, M21=-0.7071067811865475, M22=0.7071067811865476); /* IE */
+    }
+    > span.closeHints{
+        display: block;
+        width: 31px;
+        height: 31px;
+        cursor: pointer;
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        background: url('../images/closeHints.png') no-repeat;
+        z-index: 11;
+    }
+}
+
+.costList{
+    display: block;
+    margin: 0 0 0 -20px;
+    padding: 0;
+    width: 65%;
+}
+
+.costList > li{
+    display: inline-block;
+    margin: 0 0 5px 0;
+    position: relative;
+    padding: 0 0 0 20px;
+
+    &:after {
+        content:'';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background-color: $maincolor2;
+        left: 5px;
+        top: 7px;
+    }
+}
+.costList > li > a{
+    display: block;
+    text-decoration: underline;
+    color: black;
+}
+
+.thePricer{
+    position: absolute;
+    bottom: 0;
+    right: -105px;
+}
+
+#calcImage{
+    display: block;
+    position: relative;
+    z-index: 7;
+    width: 355px;
+    height: 355px;
+    border-radius: 50%;
+    margin-bottom: -85px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.calcPriceName {
+    color: #fff;
+    font-size: 20px;
+}
+
+.theCalcPrice{
+    z-index: 6;
+    position: relative;
+    display: block;
+    width: 455px;
+    height: 255px;
+    padding: 30px 0 0 20px;
+    background: $maincolor2;
+}
+.theCalcPrice > .calcPriceKeeper{
+    font-size: 48px;
+    line-height: 40px;
+    color: white;
+}
+.theCalcPrice > .calcPriceKeeper > .rub{
+    font-size: 30px;
+    color: white;
+}
+.theCalcPrice > .title{
+    color: white;
+    font-size: 15px;
+    margin-top: 4px;
+}
+.calcPriceKeeper {
+    margin: 10px 0;
+}
+.calcFormKeeper {
+    input[type="text"] {
+        width: 50%;
+        float: left;
+        &:active, &:focus {
+            border-color:#fff;
+        }
+    }
+    button {
+        color:#fff;
+        border:1px solid #fff;
+        margin: 8px 10px;
+        float: left;
+        &:hover {
+            color:#fff;
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    #calcImage {
+        position: absolute;
+        z-index: 7;
+        width: 100%;
+        height: 180px;
+        border-radius: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        top: 0;
+    }
+    .thePricer {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        padding-top: 180px;
+    }
+    .theCalcPrice {
+        width: 100%;
+        height: 148px;
+        padding: 20px 0 0 0;
+        text-align: center;
+    }
+    .theCalc > form, .costList {
+        width: 100%;
+    }
+    .calcForm {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 767px) {
+    .thePricer {
+        position: relative;
+        bottom: auto;
+        right: auto;
+    }
+    .theCalcPrice {
+        width: 100%;
+        height: 300px;
+    }
+    #calcImage {
+        display: none !important;
+    }
+
+    .theCalc > form, .costList {
+        width: 100%;
+    }
+    .calcFormKeeper {
+        input[type="text"] {
+            width: 100%;
+            float: none;
+        }
+        button {
+            float: none;
+            margin: 0;
+        }
+    }
+    .theCalcPrice {
+        padding: 30px 20px;
+    }
+
+}
+
