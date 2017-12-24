@@ -3,6 +3,8 @@
         var mainBanner = new Swiper('.js-banner', {
             pagination: '.js-banner-pag',
             speed: 1500,
+            loop:true,
+            autoplay: 3000,
             paginationClickable: true
         });
     }
@@ -16,6 +18,7 @@
             slidesPerView: 'auto',
             spaceBetween: 20,
             speed: 1500,
+            loop:true,
             paginationClickable: true
         });
     }
@@ -33,7 +36,7 @@
 
     //modal
     $('.js-callback-open').on('click', function() {
-       $('.js-callback-modal').addClass('_shown');
+        $('.js-callback-modal').addClass('_shown');
     });
 
     $('.js-modal-close').on('click', function() {
@@ -153,4 +156,3 @@ function initMap() {
 }
 
 //google.maps.event.addDomListener(window, "load", initMap);
-

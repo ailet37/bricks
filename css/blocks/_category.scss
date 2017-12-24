@@ -98,6 +98,36 @@
             font-size: 24px;
         }
     }
+    &_works {
+        padding: 30px 0;
+        //@media screen and (min-width: $tablet-width) {
+        //    padding: 0;
+        //}
+        .category__inner {
+            padding: 0;
+        }
+        .category__item p {
+            display: inline;
+        }
+        .category__img {
+            height: 170px;
+            width: 100%;
+            flex: 0 1 100%;
+            min-width: 100px;
+        }
+        .category__item + .category__item {
+            border:none;
+        }
+    }
+    &__row + &__row {
+        margin-top: 30px;
+    }
+    &__inner-link {
+        margin-bottom: 30px;
+        @media screen and (min-width: $tablet-width) {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .category-post {

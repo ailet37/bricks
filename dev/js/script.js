@@ -3,9 +3,50 @@
         var mainBanner = new Swiper('.js-banner', {
             pagination: '.js-banner-pag',
             speed: 1500,
+            loop:true,
+            autoplay: 3000,
             paginationClickable: true
         });
     }
+    if ($('.js-works-slider').length) {
+        var worksSlider = new Swiper('.js-works-slider', {
+            pagination: '.js-works-pag',
+            paginationType: 'fraction',
+            prevButton: '.js-works-prev',
+            nextButton: '.js-works-next',
+            //slidesPerView: 1,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            speed: 1500,
+            loop:true,
+            paginationClickable: true
+        });
+    }
+
+    //header menu mobile
+    $('.js-open-mobile-menu').on('click', function() {
+        $('.js-menu').toggleClass('_opened');
+        $('body').toggleClass('_modal-opened');
+    });
+
+    $('.js-close-mobile-menu').on('click', function() {
+        $('.js-menu').toggleClass('_opened');
+        $('body').toggleClass('_modal-opened');
+    });
+
+    //modal
+    $('.js-callback-open').on('click', function() {
+        $('.js-callback-modal').addClass('_shown');
+    });
+
+    $('.js-modal-close').on('click', function() {
+        $(this).closest('.modal').removeClass('_shown');
+    });
+
+    //order
+    $('.js-order-open').on('click', function() {
+        $('.js-order-modal').addClass('_shown');
+    });
 })();
 
 
@@ -109,9 +150,9 @@ function initMap() {
 
     google.maps.event.addDomListener(window, 'resize', function () {
         var center = map.getCenter();
-        google.maps.event.trigger(map, "resize")
+        google.maps.event.trigger(map, "resize");
         map.setCenter(center)
     })
 }
 
-google.maps.event.addDomListener(window, "load", initMap);
+//google.maps.event.addDomListener(window, "load", initMap);

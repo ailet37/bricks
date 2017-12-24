@@ -1,7 +1,7 @@
 <?php $category_services_id = get_cat_ID('Наши услуги'); ?>
 
 <?php if ($category_services_id) {
-$args_qry = array('category' => $category_services_id, 'post_type' => 'post', 'order'=>'ASC');
+$args_qry = array('category' => $category_services_id, 'post_type' => 'post', 'orderby' => 'ID', 'order'=>'ASC');
 $category_posts_list = get_posts($args_qry);
 if ($category_posts_list) { ?>
 
@@ -10,7 +10,7 @@ if ($category_posts_list) { ?>
             <div class="row gutters">
                 <div class="col-xs-12 col-sm-12 col-lg-4">
                     <div class="services__description">
-                        <h1 class="services__title title-md" title="<?php echo get_cat_name( $category_services_id ) ?>"><?php echo get_cat_name( $category_services_id ) ?></h1>
+                        <h2 class="services__title title-md" title="<?php echo get_cat_name( $category_services_id ) ?>"><?php echo get_cat_name( $category_services_id ) ?></h2>
                         <div class="services__text text-md">
                             <?php echo category_description( $category_services_id ); ?>
                         </div>

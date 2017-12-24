@@ -280,3 +280,26 @@ function dimox_breadcrumbs() {
     }
 } // end of dimox_breadcrumbs()
 
+function myTemplateSelect() {
+    if (is_category() && !is_feed()) {
+        if (is_category(get_cat_id('Наши работы')) || cat_is_ancestor_of(get_cat_id('Наши работы'), get_query_var('cat'))) {
+            load_template(TEMPLATEPATH . '/category-works.php');
+            exit;
+        }
+    }
+}
+
+add_action('template_redirect', 'myTemplateSelect');
+
+function getTheFirstImage() {
+    $files = get_children('post_parent='.get_the_ID().'&post_type=attachment&post_mime_type=image');
+    if($files) :
+        $keys = array_reverse(array_keys($files));
+        $j=0; $num = $keys[$j];
+        $image=wp_get_attachment_image($num, 'large', false);
+        $imagepieces = explode('"', $image);
+        $imagepath = $imagepieces[1];
+        $thumb=wp_get_attachment_thumb_url($num);
+        echo "<img src='$thumb' class='thumbnail' />";
+    endif;
+}
