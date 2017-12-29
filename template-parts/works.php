@@ -54,7 +54,7 @@ $children_categories = get_categories('child_of=' . $category_works_id . '');
                                             </div>
                                         <?php endwhile ?>
                                     <?php endforeach; ?>
-                                <?php endif; ?> 
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="works__slider-nav">

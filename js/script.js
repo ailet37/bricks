@@ -156,3 +156,96 @@ function initMap() {
 }
 
 //google.maps.event.addDomListener(window, "load", initMap);
+
+
+var defaultInputZone = 10; var defaultInputCorners = 4;
+//var defaultInputTubes = 2;
+
+var textureMatteWhite = 249;var textureMatteColor = 286;
+var textureSatinWhite = 280; var textureSatinColor = 322;
+var textureGlossWhite = 310; var textureGlossColor = 356;
+var textureClothWhite = 800; var textureClothColor = 950;
+
+var patternCorner = $('.js-corners').data('cost') || 100; var patternCornerMax = 4;
+var edgingCorner = 250; var edgingCornerMax = 2;
+
+function doCalc(){
+    var texture = $('input[name=texture]:checked', '#js-calc-form').val();
+    var color = $('input[name=color]:checked', '#js-calc-form').val();
+    var texturePrice = window[texture+color];
+
+    var image = $('#js-calc-image');
+
+    if(image.attr('data') != texture+color){
+        image.hide();
+        image.css('background-image','url(/uploads/image/calc/'+texture+color+'.jpg)');
+        image.attr('data',texture+color);
+        image.fadeIn(1000);
+    }
+
+    var inputZone = defaultInputZone;
+    var inputCorners = defaultInputCorners;
+    //var inputTubes = defaultInputTubes;
+    var userInputZone = $('#in1').val();
+    var userInputCorners = $('#in2').val();
+    //var userInputTubes = $('#in3').val();
+
+    if($.isNumeric(userInputZone) && userInputZone > 0){ inputZone = userInputZone; }
+    if($.isNumeric(userInputCorners) && userInputCorners > 0){ inputCorners = userInputCorners; }
+    //if($.isNumeric(userInputTubes) && userInputTubes > 0){ inputTubes = userInputTubes; }
+
+    var totalPrice = texturePrice*inputZone;
+
+    if(inputCorners > patternCornerMax){
+        inputCorners = inputCorners - patternCornerMax;
+        totalPrice = totalPrice+(inputCorners*patternCorner);
+    }
+
+    // if(inputTubes > edgingCornerMax){
+    //     inputTubes = inputTubes - edgingCornerMax;
+    //     totalPrice = totalPrice+(inputTubes*edgingCorner);
+    // }
+
+    $('#js-calc-price').html(totalPrice);
+}
+
+function calcPlus(obj){
+
+    var input = $('#'+$(obj).attr('data'));
+    if(!$.isNumeric(input.val())){
+        input.val("0");
+    } else {
+        var newnum = eval(input.val().trim());
+        newnum++;
+        input.val(newnum);
+    }
+    if(input.val() > 9999) { input.val(1); }
+    doCalc();
+}
+
+function calcMinus(obj){
+
+    var input = $('#'+$(obj).attr('data'));
+    if(!$.isNumeric(input.val()) || eval(input.val())-1<0){
+        input.val("0");
+    } else {
+        var newnum = eval(input.val().trim());
+        newnum--;
+        input.val(newnum);
+    }
+    doCalc();
+}
+
+$(document).ready(function(){
+    $(document).on('input', '#in1, #in2, #in3', function () {
+        $(this).val($(this).val().replace(/[^0-9.]/g, ""));
+        if($(this).val() > 9999) { $(this).val(1); }
+        doCalc();
+    });
+
+
+    $("input[name=texture]:radio,input[name=color]:radio").change(function () {
+        doCalc();
+    });
+    doCalc();
+});
