@@ -13,7 +13,7 @@ Template Name: Pools Page
                 <?php the_title(); ?>
             </div>
             <div class="teaser__descr">
-                <?php the_excerpt(); ?>
+                <?php show_descr_top($cat); // выводим верхнее описание категории ?>
             </div>
             <a href="#calculate" class="teaser__btn btn">РАССЧИТАТЬ СТОИМОСТЬ</a>
         </div>
@@ -210,9 +210,7 @@ Template Name: Pools Page
 <section class="seo-post">
     <div class="container">
         <div class="seo-post__text">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <?php the_content(); ?>
-            <?php endwhile; endif; ?>
+            <?php show_descr_bottom($cat); // выводим нижнее описание категории ?>
         </div>
 </section>
 

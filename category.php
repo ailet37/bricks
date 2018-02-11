@@ -13,7 +13,6 @@ $children_categories = get_categories('parent=' . $cat . '');
 
     <section class="category-header">
         <div class="container">
-
             <?php get_template_part('breadcrumbs'); ?>
 
             <h1 class="category-header__title title-md"><?php single_cat_title(); ?></h1>
@@ -21,29 +20,27 @@ $children_categories = get_categories('parent=' . $cat . '');
             <p class="category-header__text">
                 <?php show_descr_top($cat); // выводим верхнее описание категории ?>
             </p>
-
         </div>
     </section>
 
     <section class="category">
         <div class="container">
             <div class="row">
-                <?php  $news_query  = new WP_Query; ?>
                 <?php if ($children_categories): // если есть дочерние категории ?>
                     <?php foreach ($children_categories as $children_category): ?>
                         <?php
 
                         //ссылка на рубрику
                         $link = get_category_link($children_category->cat_ID);
+
                         //берем первый пост категории, из него - обложку
-                        $news_query->query( array(
-                            'cat'                 => $children_category->cat_ID,
-                            'posts_per_page'      => 1,
-                            'no_found_rows'       => true,
-                            'ignore_sticky_posts' => true,
-                        ));
-                        ?>
-                        <?php while ( $news_query->have_posts() ) : $news_query->the_post() ?>
+                        $products = get_posts(array(
+                                'post_type' => 'product',
+                                'category' => $children_category->cat_ID,
+                                'numberposts' => 1)
+                        ); ?>
+                        <?php foreach( $products as $post ) :
+                            setup_postdata($post); ?>
                             <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
                                 <a href="<?php echo $link; ?>" class="category__inner">
                                     <div class="category__img" style="background-image: url(<?php echo the_post_thumbnail_url('large'); ?>);"></div>
@@ -54,11 +51,17 @@ $children_categories = get_categories('parent=' . $cat . '');
                                     </div>
                                 </a>
                             </div>
-                        <?php endwhile ?>
+                        <?php endforeach; ?>
                     <?php endforeach; ?>
                 <?php else: // иначе - выводим записи ?>
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : the_post(); ?>
+                    <?php
+
+                    $products = get_posts(array('post_type' => 'product'));
+
+                    if ($products)
+                        foreach( $products as $post ) :
+
+                            setup_postdata($post); ?>
                             <div class="col-xs-12 col-sm-4 col-lg-3 category__item">
                                 <a href="<?php the_permalink(); ?>" class="category__inner" title="<?php the_title(); ?>">
                                     <div class="category__img"
@@ -78,9 +81,11 @@ $children_categories = get_categories('parent=' . $cat . '');
                                     </div>
                                 </a>
                             </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                <?php endif; // конец условия - если есть дочерние категории ?>
+
+                        <?php endforeach;
+                    wp_reset_postdata();
+
+                 endif; // конец условия - если есть дочерние категории ?>
             </div>
         </div>
     </section>

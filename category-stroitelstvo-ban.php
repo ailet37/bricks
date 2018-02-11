@@ -13,7 +13,7 @@ Template Name: Sauna Page
                 <?php the_title(); ?>
             </h1>
             <div class="teaser__descr">
-                <?php the_excerpt(); ?>
+                <?php show_descr_top($cat); // выводим верхнее описание категории ?>
             </div>
             <a href="#calculate" class="teaser__btn btn">РАССЧИТАТЬ СТОИМОСТЬ</a>
         </div>
@@ -70,7 +70,7 @@ Template Name: Sauna Page
                         оцилиндрованного
                         бревна
                     </h2>
-                    <div class="advantages__main-text">Вы сможете приобрести у нас современные препараты для бассейнов
+                    <div class="advantages__main-text text-md">Вы сможете приобрести у нас современные препараты для бассейнов
                         всех типов, включая эффективные средства на основе активного кислорода и хлора.
                         Кроме средств для дезинфекции и очистки воды, наш магазин предлагает препараты для уничтожения
                     </div>
@@ -176,12 +176,9 @@ Template Name: Sauna Page
 
 <section class="seo-post">
     <div class="container">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <div class="seo-post__text">
-          <?php the_content(); ?>
+          <?php show_descr_bottom($cat); // выводим нижнее описание категории ?>
       </div>
-    <?php endwhile; endif; ?>
-
 </section>
 
 <?php get_template_part('template-parts/partners'); ?>
