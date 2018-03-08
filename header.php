@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="shortcut icon" href="<?php bloginfo("template_directory"); ?>/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php bloginfo("template_directory"); ?>/assets/img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php bloginfo("template_directory"); ?>/assets/img/favicons/favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php bloginfo("template_directory"); ?>/assets/img/favicons/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="<?php bloginfo("template_directory"); ?>/style.css">
 </head>
 <?php wp_head(); ?>

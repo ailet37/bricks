@@ -33,11 +33,10 @@
 	&__logo {
 		background-image: url(/wp-content/themes/bricks/assets/svg/footer_logo.svg);
 		background-repeat: no-repeat;
-		-webkit-background-size: cover;
-		background-size: cover;
+		background-size: 90%;
 		display: inline-block;
-		width: 161px;
-		height: 54px;
+		width: 250px;
+		height: 47px;
 	}
 	&__menu {
 		padding: 30px 0 40px;

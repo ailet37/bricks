@@ -95,14 +95,13 @@
     &__logo {
         background-image: url(assets/svg/logo.svg);
         background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        background-size: cover;
+        background-size: 100%;
         display: block;
-        width: 108px;
-        height: 39px;
+        width: 155px;
+        height: 32px;
         @media screen and (min-width: $tablet-width) {
-            width: 154px;
-            height: 56px;
+            width: 200px;
+            height: 45px;
         }
     }
     &__contact {

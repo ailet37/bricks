@@ -127,14 +127,36 @@
             }
         }
     }
-    .wp-caption.alignright {
+
+    ol {
+        margin: 20px 0;
+        counter-reset: li;
+        li {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.29;
+            color:#3d3d3d;
+            padding-left: 33px;
+            margin: 4px 0;
+            position: relative;
+            &:before {
+                counter-increment: li;
+                content:"" counter(li) ". ";
+                position: absolute;
+                left: 15px;
+            }
+        }
+    }
+
+
+    .wp-caption.alignright, .alignright {
         margin: 30px 0;
         @media screen and (min-width: $desktop-width) {
             float: right;
             margin: 0 0 30px 30px;
         }
     }
-    .wp-caption.alignleft {
+    .wp-caption.alignleft, .alignleft {
         margin: 30px 0;
         @media screen and (min-width: $desktop-width) {
             float: left;
@@ -146,5 +168,4 @@
         font-style: italic;
         padding-top: 5px;
     }
-
 }

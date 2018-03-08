@@ -1,16 +1,16 @@
 <?php
 /*
-Template Name: Sauna Page
+Template Name: Bani Page
 */
 ?>
 <?php get_header(); ?>
 
-<section class="teaser">
+<section class="teaser teaser_ban">
     <div class="container">
         <?php get_template_part('breadcrumbs'); ?>
         <div class="teaser__info">
-            <h1 class="teaser__title title-md" title="<?php the_title(); ?>">
-                <?php the_title(); ?>
+            <h1 class="teaser__title title-md" title="<?php single_cat_title('', true ); ?>">
+                <?php single_cat_title('', true ); ?>
             </h1>
             <div class="teaser__descr">
                 <?php show_descr_top($cat); // выводим верхнее описание категории ?>
@@ -29,9 +29,7 @@ Template Name: Sauna Page
                         Бани из бруса
                     </h2>
                     <div class="advantages__main-text text-md">
-                        Вы сможете приобрести у нас современные препараты для бассейнов всех типов, включая эффективные
-                        средства на основе активного кислорода и хлора.
-                        Кроме средств для дезинфекции и очистки воды, наш магазин предлагает препараты для уничтожения
+                        Наибольшей популярностью сегодня пользуются бани из бруса. Они хорошо выглядят снаружи, удобны и эстетичны внутри, а их функциональность и надежность не вызывает сомнений. По этой причине мы предпочитаем работать с профилированным брусом и рекомендуем этот материал всем нашим клиентам, но возможны и другие варианты.
                     </div>
                 </div>
 
@@ -49,9 +47,7 @@ Template Name: Sauna Page
                     <h2 class="advantages__title title-md">
                         Бани из бревна
                     </h2>
-                    <div class="advantages__main-text text-md">Вы сможете приобрести у нас современные препараты для
-                        бассейнов всех типов, включая эффективные средства на основе активного кислорода и хлора.
-                        Кроме средств для дезинфекции и очистки воды, наш магазин предлагает препараты для уничтожения
+                    <div class="advantages__main-text text-md">Окоренные или оцилиндрованные бревна — наиболее экологически чистый материал для строительства бань. Благодаря натуральным смолам в составе древесины воздух в такой бане обладает тонизирующим и лечебным эффектом для организма человека. Также данный строительный материал позволяет воплотить практически любую идею. Если вы хотите получить баню, более всего отвечающую "исконно русскому духу", то ваш выбор - несомненно, бревенчатая баня.
                     </div>
                 </div>
             </div>
@@ -62,7 +58,7 @@ Template Name: Sauna Page
             </div>
 
         </div>
-        <div class="advantages__row row">
+        <!--<div class="advantages__row row">
             <div class="col-xs-12 col-sm-6 col-lg-6">
                 <div class="advantages__about">
                     <h2 class="advantages__title title-md">
@@ -81,7 +77,7 @@ Template Name: Sauna Page
                     <img src="<?php bloginfo("template_directory"); ?>/assets/img/sauna/sauna-3.jpg" alt="">
 
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>
@@ -92,7 +88,7 @@ Template Name: Sauna Page
         <div class="row gutters">
 
             <div class="col-xs-12 col-sm-4 col-lg-4">
-                <a href="" class="cart-item"
+                <a href="/stroitelstvo-ban/finskaya-parnaya/" class="cart-item"
                    style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/sauna/fin.jpg);">
                     <div class="cart-item__title">
                         Финская
@@ -104,28 +100,27 @@ Template Name: Sauna Page
                 </a>
             </div>
             <div class="col-xs-12 col-sm-4 col-lg-4">
-                <div class="cart-item"
+                <a href="/stroitelstvo-ban/turetskaya-sauna-hammam/" class="cart-item"
                      style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/sauna/turk.jpg);">
                     <div class="cart-item__title">
                         Турецкая
-                        сауна
+                        сауна (хаммам)
                     </div>
                     <div class="cart-item__btn circle-btn center-svg">
                         <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/arrow.svg'); ?>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-4 col-lg-4">
-                <div class="cart-item"
+                <a href="/stroitelstvo-ban/russkaya-banya/ " class="cart-item"
                      style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/sauna/rus.jpg);">
                     <div class="cart-item__title">
-                        Русская
-                        баня
+                        Русская баня
                     </div>
                     <div class="cart-item__btn circle-btn center-svg">
                         <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/arrow.svg'); ?>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -176,7 +171,7 @@ Template Name: Sauna Page
 
 <section class="seo-post">
     <div class="container">
-      <div class="seo-post__text">
+      <div class="post seo-post__text">
           <?php show_descr_bottom($cat); // выводим нижнее описание категории ?>
       </div>
 </section>

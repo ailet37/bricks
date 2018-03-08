@@ -9,9 +9,9 @@ Template Name: Pools Page
     <div class="container">
         <?php get_template_part('breadcrumbs'); ?>
         <div class="teaser__info">
-            <div class="teaser__title title-md">
-                <?php the_title(); ?>
-            </div>
+            <h1 class="teaser__title title-md" title="<?php single_cat_title('', true ); ?>">
+                <?php single_cat_title('', true ); ?>
+            </h1>
             <div class="teaser__descr">
                 <?php show_descr_top($cat); // выводим верхнее описание категории ?>
             </div>
@@ -25,11 +25,8 @@ Template Name: Pools Page
         <div class="advantages__row row">
             <div class="col-xs-12 col-sm-6 col-lg-6">
                 <div class="advantages__about">
-                    <h2 class="advantages__title title-md">Строительство
-                        бассейнов</h2>
-                    <div class="advantages__main-text text-md">Вы сможете приобрести у нас современные препараты для
-                        бассейнов всех типов, включая эффективные средства на основе активного кислорода и хлора.
-                        Кроме средств для дезинфекции и очистки воды, наш магазин предлагает препараты для уничтожения
+                    <!--<h2 class="advantages__title title-md">Бассейны "под ключ"</h2>-->
+                    <div class="advantages__main-text text-md">Проектирование и строительство бассейнов "под ключ" — основное направление деятельности компании «БРИКС». Мы берем на себя всю работу — от подбора материалов и оборудования до монтажа и финишной отделки бассейна. Накопленный опыт позволяет нам браться за проекты любой сложности, учитывая все особенности участка и индивидуальные пожелания заказчика.<br><br>В основном мы проектируем и строим бассейны из бетона, но также делаем и бассейны из нержавеющей стали, а также осуществляем сборку и установку павильонов для уличных бассейнов всех видов, плавающих покрывал и автоматических жалюзей.
                     </div>
                 </div>
 
@@ -62,19 +59,17 @@ Template Name: Pools Page
 
             <div class="col-xs-12 col-sm-6 col-lg-6">
                 <div class="advantages__img">
-                    <img src="<?php bloginfo("template_directory"); ?>/assets/img/pools/pools-3.jpg" alt="">
+                    <img src="<?php bloginfo("template_directory"); ?>/assets/img/pools/na-str-bass-1.jpg" alt="Строительство бассейнов из бетона в Татарстане">
 
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-6">
                 <div class="advantages__about">
                     <h2 class="advantages__title title-md">
-                        Стационарные
-                        бассейны
+                        Бассейны из бетона
                     </h2>
-                    <div class="advantages__main-text text-md">Вы сможете приобрести у нас современные препараты для
-                        бассейнов всех типов, включая эффективные средства на основе активного кислорода и хлора.
-                        Кроме средств для дезинфекции и очистки воды, наш магазин предлагает препараты для уничтожения
+                    <div class="advantages__main-text text-md">Строительство бассейнов из бетона — основной вид деятельности нашей компании. 
+Все реализуемые варианты проектов индивидуальны. У нас накоплен огромный опыт в реализации бассейнов под любые требования и пожелания, как больших общественных бассейнов, так и небольших стационарных бассейнов в частных домах. С примерами работ можете ознакомиться в соответствующем <a href="/nashi-raboty/">Разделе сайта</a>.
                     </div>
                 </div>
             </div>
@@ -82,18 +77,36 @@ Template Name: Pools Page
         <div class="advantages__row row">
             <div class="col-xs-12 col-sm-6 col-lg-6">
                 <div class="advantages__img">
-                    <img src="<?php bloginfo("template_directory"); ?>/assets/img/pools/pools-3.jpg" alt="">
+                    <img src="<?php bloginfo("template_directory"); ?>/assets/img/pools/Bassejny-iz-nerzhaveyushchej-stali.jpg" alt="Строительство бассейнов из нержавеющей стали в Татарстане">
 
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-6">
                 <div class="advantages__about">
                     <h2 class="advantages__title title-md">
-                        Сборные бассейны
+                        Строительство бассейнов из нержавеющей стали
                     </h2>
-                    <div class="advantages__main-text">Вы сможете приобрести у нас современные препараты для бассейнов
-                        всех типов, включая эффективные средства на основе активного кислорода и хлора.
-                        Кроме средств для дезинфекции и очистки воды, наш магазин предлагает препараты для уничтожения
+                    <div class="advantages__main-text">Наша компания осуществляет проектирование, производство, монтаж и обслуживание бассейнов из нержавеющей стали.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="advantages__row row">
+
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+                <div class="advantages__img">
+                    <img src="<?php bloginfo("template_directory"); ?>/assets/img/pools/na-str-bass-3-pavilion.jpg" alt="Строительство павильонов и жалюзей для бассейнов в Татарстане">
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+                <div class="advantages__about">
+                    <h2 class="advantages__title title-md">
+                        Сборка и установка павильонов и жалюзей
+                    </h2>
+                    <div class="advantages__main-text text-md">Осуществляем:<ul><li>сборку и установку открытых, раздвижных и закрытых  павильонов для уличных бассейнов любых форм и размеров.</li>
+<li>сборка и установка плавающих покрывал и автоматических плавающих покрытий (автоматические жалюзи) для бассейнов.</li></ul>
                     </div>
                 </div>
             </div>
@@ -209,7 +222,7 @@ Template Name: Pools Page
 
 <section class="seo-post">
     <div class="container">
-        <div class="seo-post__text">
+        <div class="post seo-post__text">
             <?php show_descr_bottom($cat); // выводим нижнее описание категории ?>
         </div>
 </section>

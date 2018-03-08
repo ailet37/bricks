@@ -56,7 +56,11 @@ $children_categories = get_categories('parent=' . $cat . '');
                 <?php else: // иначе - выводим записи ?>
                     <?php
 
-                    $products = get_posts(array('post_type' => 'product'));
+                    $products = get_posts(array(
+                            'post_type' => 'product',
+                            'category' => $cat,
+                            'posts_per_page' => 100
+                    ));
 
                     if ($products)
                         foreach( $products as $post ) :

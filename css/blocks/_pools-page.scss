@@ -7,12 +7,17 @@
     background-repeat: no-repeat;
     color: #fff;
 
+    &_ban {
+        background-image: url(assets/img/sauna/main-bg.png);
+        min-height:300px;
+    }
+
     @media screen and (min-width: $tablet-width) {
         padding: 40px 0;
     }
     &__info {
         @media screen and (min-width: $tablet-width) {
-            width: 40%;
+            width: 50%;
         }
     }
 
@@ -104,6 +109,11 @@
         margin-bottom: 30px;
         @media screen and (min-width: $desktop-width) {
             margin-bottom: 0;
+        }
+        img {
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
         }
     }
 }
