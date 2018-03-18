@@ -54,6 +54,7 @@ $children_categories = get_categories('parent=' . $cat . '');
 
                             </div>
                             <div class="col-xs-8 col-sm-8 col-lg-9 category__item">
+                                <a href="<?php echo $link; ?>" class="category__item-link"><h2 title="<?php the_title(); ?>"><?php the_title(); ?></h2></a>
                                 <?php echo category_description($children_category->cat_ID); ?>...
                                 <a href="<?php echo $link; ?>" class="link">Подробнее</a>
                             </div>

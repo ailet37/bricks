@@ -20,7 +20,7 @@ $content = $post->post_content;
 <?php if ($content) : ?>
     <section class="seo-post">
         <div class="container">
-            <h2 class="seo-post__title title-md"><?php the_title(); ?></h2>
+            <h1 class="seo-post__title title-md"><?php the_title(); ?></h1>
             <div class="seo-post__text post">
                 <?php echo $content ?>
             </div>

@@ -12,8 +12,8 @@ $children_categories = get_categories('child_of=' . $category_works_id . '');
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-lg-5">
                     <article class="works__post">
-                        <h1 class="works__header-title title-md"
-                            title="<?php echo get_cat_name($category_works_id) ?>"><?php echo get_cat_name($category_works_id) ?></h1>
+                        <h2 class="works__header-title title-md"
+                            title="<?php echo get_cat_name($category_works_id) ?>"><?php echo get_cat_name($category_works_id) ?></h2>
                         <div class="works__text text-md">
                             <?php echo category_description($category_works_id); ?>
                         </div>
