@@ -53,7 +53,7 @@
          .pipe(sourcemaps.init())
          .pipe(sass()) //Скомпилируем
          .pipe(autoprefixer()) //Добавим вендорные префиксы
-         //.pipe(cssmin()) //Сожмем
+         .pipe(cssmin()) //Сожмем
          .pipe(sourcemaps.write())
          .pipe(gulp.dest(path.build.css)) //И в build
          .pipe(browserSync.reload({stream: true}));

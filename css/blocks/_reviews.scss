@@ -42,11 +42,8 @@
 
     &__item {
         margin-bottom: 30px;
-        @media screen and (min-width: $tablet-width) {
-            margin-bottom: 0;
-        }
 
-        }
+    }
     &__review {
         border-radius: 10px;
         background-color: #ffffff;
@@ -71,7 +68,14 @@
         color: #3d3d3d;
         font: 500 14px/1.3em Museo;
         margin-bottom: 16px;
-
+        img {
+            display: none;
+        }
+    }
+    &__img {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
         img {
             display: block;
             object-fit: scale-down;

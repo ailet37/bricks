@@ -188,8 +188,6 @@ function dimox_breadcrumbs() {
             if ( get_post_type() != 'post' ) {
                 $post_type = get_post_type_object(get_post_type());
                 $slug = $post_type->rewrite;
-                var_dump($post_type);
-
                 printf($link, $home_url . $slug['slug'] . '/', $post_type->labels->singular_name);
                 if ($show_current) echo $sep . $before . get_the_title() . $after;
             } else {
@@ -322,6 +320,7 @@ function create_posttype() {
                 'not_found' =>  'Товары не найдены.',
                 'not_found_in_trash' => 'В корзине нет товаров.',
             ),
+            'publicly_queryable'=>true,
             'public' => true,
             'has_archive' => false,
             'show_in_menu' => true, // показывать ли в меню адмнки
@@ -331,8 +330,35 @@ function create_posttype() {
             'supports' => array( 'title', 'editor', 'author', 'thumbnail','post-thumbnails', 'excerpt', 'custom-fields')
         )
     );
+    register_post_type( 'review',
+        array(
+            'labels' => array(
+                'name' => __( 'Отзывы' ),
+                'singular_name' => __( 'Отзыв' ),
+                'add_new' => 'Добавить отзыв',
+                'add_new_item' => 'Добавить новый отзыв', // заголовок тега <title>
+                'edit_item' => 'Редактировать отзыв',
+                'new_item' => 'Новый отзыв',
+                'all_items' => 'Все отзывы',
+                'view_item' => 'Просмотр отзыва на сайте',
+                'search_items' => 'Искать отзывы',
+                'not_found' =>  'отзывы не найдены.',
+                'not_found_in_trash' => 'В корзине нет отзывов.',
+            ),
+            'publicly_queryable'=>true,
+            'public' => true,
+            'has_archive' => false,
+            'show_in_menu' => true, // показывать ли в меню адмнки
+            'menu_icon'=>'dashicons-thumbs-up',
+            'taxonomies'          => array( 'post_tag', 'category' ),
+            'rewrite' => array('slug' => '%category%'),
+            'supports' => array( 'title', 'editor', 'author', 'thumbnail','post-thumbnails', 'excerpt', 'custom-fields','tags')
+        )
+    );
+
 }
 add_action( 'init', 'create_posttype' ); // Использовать функцию только внутри хука init
+add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 function wpa_course_post_link( $post_link, $id = 0 ){
     $post = get_post($id);

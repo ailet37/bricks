@@ -1,10 +1,7 @@
 <?php
 /**
- * The Template for displaying all single posts
+ * The Template for displaying all single products
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
  */
 ?>
 <?php get_header(); ?>
@@ -36,9 +33,7 @@
                         <div class="product-page__btn btn js-order-open">Заказать</div>
                     </div>
                     <?php endif; ?>
-
                 </div>
-
             </div>
 
             <?php while ( have_posts() ) : the_post(); ?>

@@ -29,8 +29,8 @@ Template Name: Contacts Page
         <div class="contacts__line _mail">
             <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/icon-mail.svg' ); ?>
 
-            <a href="mailto:briks-ufa@mail.ru" class="contacts__info link">
-                <div class="link__text">briks-ufa@mail.ru</div>
+            <a href="mailto:infoats@mail.ru" class="contacts__info link">
+                <div class="link__text">infoats@mail.ru</div>
             </a>
         </div>
 
