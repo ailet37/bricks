@@ -134,10 +134,21 @@ Template Name: Bani Page
                 </a>
             </div>
             <div class="col-xs-12 col-sm-4 col-lg-4">
-                <a href="/stroitelstvo-ban/russkaya-banya/ " class="cart-item"
+                <a href="/stroitelstvo-ban/russkaya-banya/" class="cart-item"
                      style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/sauna/rus.jpg);">
                     <div class="cart-item__title">
                         Русская баня
+                    </div>
+                    <div class="cart-item__btn circle-btn center-svg">
+                        <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/arrow.svg'); ?>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <a href="/stroitelstvo-ban/spa/" class="cart-item"
+                   style="background-image: url(<?php bloginfo("template_directory"); ?>/assets/img/sauna/spa.jpg);">
+                    <div class="cart-item__title">
+                         СПА
                     </div>
                     <div class="cart-item__btn circle-btn center-svg">
                         <?php echo file_get_contents(get_template_directory_uri() . '/assets/svg/arrow.svg'); ?>

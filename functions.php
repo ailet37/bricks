@@ -352,13 +352,12 @@ function create_posttype() {
             'menu_icon'=>'dashicons-thumbs-up',
             'taxonomies'          => array( 'post_tag', 'category' ),
             'rewrite' => array('slug' => '%category%'),
-            'supports' => array( 'title', 'editor', 'author', 'thumbnail','post-thumbnails', 'excerpt', 'custom-fields','tags')
+            'supports' => array( 'title', 'editor', 'author', 'thumbnail','post-thumbnails', 'excerpt', 'custom-fields')
         )
     );
 
 }
 add_action( 'init', 'create_posttype' ); // Использовать функцию только внутри хука init
-add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 function wpa_course_post_link( $post_link, $id = 0 ){
     $post = get_post($id);

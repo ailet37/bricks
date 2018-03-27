@@ -47,6 +47,10 @@
     $('.js-order-open').on('click', function() {
         $('.js-order-modal').addClass('_shown');
     });
+    //question
+    $('.js-question-open').on('click', function() {
+        $('.js-question-modal').addClass('_shown');
+    });
 })();
 
 

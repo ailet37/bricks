@@ -44,7 +44,7 @@
 
                             <a href="mailto:infoats@mail.ru" class="footer__email-link">infoats@mail.ru</a>
                         </div>
-                        <button class="footer__btn btn">Задать вопрос</button>
+                        <button class="footer__btn btn js-question-open">Задать вопрос</button>
                     </div>
                 </div>
             </div>
@@ -52,6 +52,17 @@
         </div>
     </div>
 </footer>
+<div class="modal js-question-modal">
+    <div class="modal__wrapper">
+        <button class="modal__close cross js-modal-close"></button>
+        <div class="modal__title title-sm">Задайте вопрос</div>
+        <div class="modal__form">
+            <?php echo do_shortcode('[contact-form-7 id="609" title="question"]'); ?>
+        </div>
+    </div>
+</div>
+
+
 <?php wp_footer(); ?>
 <script type="text/javascript" src="<?php bloginfo("template_directory");?>/js/lib/jquery/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo("template_directory");?>/js/lib/swiper/js/swiper.min.js"></script>

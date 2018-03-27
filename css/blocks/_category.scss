@@ -115,6 +115,10 @@
             flex: 0 1 170px;
             min-width: 100px;
         }
+        .category__link {
+            display: block;
+            margin-top: 30px;
+        }
 
         @media screen and (min-width: $tablet-width) {
             .category__img {
